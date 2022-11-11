@@ -8,14 +8,13 @@ using System.Threading.Tasks;
 
 namespace GestorDeIdentidades.Logic
 {
-    public class PreguntaLogic
+    public class PermisosLogic
     {
+        private PermisosRepository _permisos = new PermisosRepository();
 
-        private PreguntaRepository _preguntas = new PreguntaRepository();
-
-        public List<Preguntas> GetPreguntas()
+        public List<Permiso> GetPermisos()
         {
-            return _preguntas.GetPreguntas();
+            return _permisos.GetPermisos();
         }
     }
 }

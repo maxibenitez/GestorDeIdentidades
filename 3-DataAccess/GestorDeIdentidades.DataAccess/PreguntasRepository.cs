@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace GestorDeIdentidades.DataAccess
 {
-    public class PreguntaRepository
+    public class PreguntasRepository
     {
         private string ConnectionString = ConfigurationManager.ConnectionStrings["GestorDeIdentidades"].ToString();
 

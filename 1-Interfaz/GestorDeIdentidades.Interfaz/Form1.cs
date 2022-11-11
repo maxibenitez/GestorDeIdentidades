@@ -14,7 +14,8 @@ namespace GestorDeIdentidades.Interfaz
 {
     public partial class Form1 : Form
     {
-        private PreguntaLogic _preguntas = new PreguntaLogic();
+        private PreguntasLogic _preguntas = new PreguntasLogic();
+        private PermisosLogic _permisos = new PermisosLogic();
 
         public Form1()
         {
@@ -24,13 +25,21 @@ namespace GestorDeIdentidades.Interfaz
         private void Form1_Load(object sender, EventArgs e)
         {
             this.GetPreguntas();
+            this.GetPermisos();
         }
 
         private void GetPreguntas()
         {
-            List<Preguntas> listPreguntas = _preguntas.GetPreguntas();
+            List<Preguntas> listaPreguntas = _preguntas.GetPreguntas();
 
-            this.dgvPregunta.DataSource = listPreguntas;
+            this.dgvPregunta.DataSource = listaPreguntas;
+        }
+
+        private void GetPermisos()
+        {
+            List<Permiso> listaPermisos = _permisos.GetPermisos();
+
+            this.dgvPermisos.DataSource = listaPermisos;
         }
     }
 }

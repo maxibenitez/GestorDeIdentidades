@@ -63,7 +63,8 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PreguntaRepository.cs" />
+    <Compile Include="PermisosRepository.cs" />
+    <Compile Include="PreguntasRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

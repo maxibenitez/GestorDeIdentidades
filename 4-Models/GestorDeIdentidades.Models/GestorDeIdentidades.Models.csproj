@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Permiso.cs" />
+    <Compile Include="Persona.cs" />
     <Compile Include="Preguntas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
