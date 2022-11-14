@@ -47,6 +47,7 @@
             this.ComboPreguntas = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.InputRespuesta = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -179,6 +180,7 @@
             this.BotonRegistrarse.TabIndex = 3;
             this.BotonRegistrarse.Text = "Registrarse";
             this.BotonRegistrarse.UseVisualStyleBackColor = true;
+            this.BotonRegistrarse.Click += new System.EventHandler(this.BotonRegistrarse_Click);
             // 
             // ComboPreguntas
             // 
@@ -204,11 +206,21 @@
             this.InputRespuesta.Size = new System.Drawing.Size(119, 20);
             this.InputRespuesta.TabIndex = 1;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(430, 342);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(41, 13);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "label10";
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(561, 367);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.ComboPreguntas);
             this.Controls.Add(this.BotonRegistrarse);
@@ -256,5 +268,6 @@
         private System.Windows.Forms.ComboBox ComboPreguntas;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox InputRespuesta;
+        private System.Windows.Forms.Label label10;
     }
 }

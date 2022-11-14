@@ -17,5 +17,30 @@ namespace GestorDeIdentidades.Interfaz
             InitializeComponent();
         }
 
+        private void BotonRegistrarse_Click(object sender, EventArgs e)
+        {
+            Registrarse();
+        }
+
+        private void Registrarse()
+        {
+            string usuario = InputUsuario.Text;
+            string contrasena = InputContrasena.Text;
+            string nombre = InputNombre.Text;
+            string apellido = InputApellido.Text;
+            string direccion = InputDireccion.Text;
+            string ciudad = InputCiudad.Text;
+            string departamento = InputDepartamento.Text;
+            string respuesta = InputRespuesta.Text;
+
+            if (usuario == "" || contrasena == "" || nombre == "" || apellido == "" || direccion == "" || ciudad == "" || departamento == "" || respuesta == "")
+            {
+                label10.Text = "error";
+            }
+            else
+            {
+                label10.Text = "cheto";
+            }
+        }
     }
 }
