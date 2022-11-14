@@ -18,3 +18,25 @@ C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatori
 C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.csproj.CopyComplete
 C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.exe
 C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.pdb
+C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\bin\Debug\GestorDeIdentidades.Interfaz.exe.config
+C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\bin\Debug\GestorDeIdentidades.Interfaz.exe
+C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\bin\Debug\GestorDeIdentidades.Interfaz.pdb
+C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\bin\Debug\GestorDeIdentidades.Logic.dll
+C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\bin\Debug\GestorDeIdentidades.Models.dll
+C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\bin\Debug\GestorDeIdentidades.DataAccess.dll
+C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\bin\Debug\Dapper.dll
+C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\bin\Debug\GestorDeIdentidades.Logic.pdb
+C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\bin\Debug\GestorDeIdentidades.Models.pdb
+C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\bin\Debug\GestorDeIdentidades.DataAccess.pdb
+C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\bin\Debug\Dapper.xml
+C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.csproj.AssemblyReference.cache
+C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.csproj.SuggestedBindingRedirects.cache
+C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.Form1.resources
+C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.Properties.Resources.resources
+C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.csproj.GenerateResource.cache
+C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.csproj.CoreCompileInputs.cache
+C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.csproj.CopyComplete
+C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.exe
+C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.pdb
+C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.Login.resources
+C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.Registro.resources

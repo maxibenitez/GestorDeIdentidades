@@ -60,9 +60,10 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label1.Location = new System.Drawing.Point(12, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 25);
+            this.label1.Size = new System.Drawing.Size(248, 25);
             this.label1.TabIndex = 2;
-            this.label1.Text = "TABLA DE PERMISOS";
+            this.label1.Text = "TABLA DE APLICATIVOS";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 
