@@ -12,5 +12,7 @@ namespace GestorDeIdentidades.DataAccess.Interfaces
         List<Permiso> GetPermisos();
 
         bool AddPersonaPermiso(Permiso permiso);
+
+        bool UpdatePersonaPermiso(Permiso permiso);
     }
 }

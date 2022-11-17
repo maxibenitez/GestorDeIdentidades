@@ -11,6 +11,8 @@ namespace GestorDeIdentidades.DataAccess.Interfaces
     {
         PersonaLoginInfo DatosRegistroPersona(int userId);
 
+        RolNegocioPersona GetRolNegPersona(int userId);
+
         int AddPersona(Persona persona);
     }
 }

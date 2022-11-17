@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GestorDeIdentidades.Models;
 
 namespace GestorDeIdentidades.Logic.Implementation
 {
@@ -21,9 +22,28 @@ namespace GestorDeIdentidades.Logic.Implementation
             _preguntasService = preguntasService;
         }
 
-        public bool LoginPersona(int userId, string password)
+        public bool LoginPersona(int userId, string password, out bool isAdmin)
         {
-            throw new NotImplementedException();
+            PersonaLoginInfo userSession = _personasService.DatosRegistroPersona(userId);
+            RolNegocioPersona rolPersona = _personasService.GetRolNegPersona(userId);
+
+            bool isValidPassword = false;
+
+            if(userSession != null)
+            {
+                isValidPassword = BCrypt.Net.BCrypt.Verify(password, userSession.Password);
+            }
+
+            if(rolPersona.DescripcionRolNeg.Equals("Gestionar usuarios"))
+            {
+                isAdmin = true;
+            }
+            else
+            {
+                isAdmin = false;
+            }
+
+            return isValidPassword;
         }
 
         public bool NuevoPassword(string password)

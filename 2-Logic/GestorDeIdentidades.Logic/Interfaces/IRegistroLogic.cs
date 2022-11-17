@@ -15,6 +15,6 @@ namespace GestorDeIdentidades.Logic.Interfaces
 
         List<RolNegocio> GetRolesNegocio();
 
-        bool RegistrarPersona(RegistroPersona persona);
+        int RegistrarPersona(RegistroPersona persona);
     }
 }

@@ -8,7 +8,7 @@ namespace GestorDeIdentidades.Logic.Interfaces
 {
     public interface ILoginLogic
     {
-        bool LoginPersona(int userId, string password);
+        bool LoginPersona(int userId, string password, out bool isAdmin);
 
         bool NuevoPassword(string password);
 
