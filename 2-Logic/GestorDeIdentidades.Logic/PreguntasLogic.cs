@@ -11,7 +11,7 @@ namespace GestorDeIdentidades.Logic
     public class PreguntasLogic
     {
 
-        private PreguntasRepository _preguntas = new PreguntasRepository();
+        private PreguntasService _preguntas = new PreguntasService();
 
         public List<Preguntas> GetPreguntas()
         {
