@@ -53,6 +53,7 @@
             this.dgvPermisos.Name = "dgvPermisos";
             this.dgvPermisos.Size = new System.Drawing.Size(776, 362);
             this.dgvPermisos.TabIndex = 1;
+            this.dgvPermisos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPermisos_CellContentClick);
             // 
             // label1
             // 

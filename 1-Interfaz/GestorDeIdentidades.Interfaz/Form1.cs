@@ -26,7 +26,7 @@ namespace GestorDeIdentidades.Interfaz
         private void Form1_Load(object sender, EventArgs e)
         {
             //this.GetPreguntas();
-            //this.GetPermisos();
+            this.GetPermisos();
             this.GetAplicativos();
         }
 
@@ -52,6 +52,11 @@ namespace GestorDeIdentidades.Interfaz
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvPermisos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

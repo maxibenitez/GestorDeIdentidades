@@ -36,3 +36,5 @@ C:\Users\guill\Desktop\GestorDeIdentidades\3-DataAccess\GestorDeIdentidades.Data
 C:\Users\guill\Desktop\GestorDeIdentidades\3-DataAccess\GestorDeIdentidades.DataAccess\obj\Debug\GestorDeIdentidades.DataAccess.csproj.CopyComplete
 C:\Users\guill\Desktop\GestorDeIdentidades\3-DataAccess\GestorDeIdentidades.DataAccess\obj\Debug\GestorDeIdentidades.DataAccess.dll
 C:\Users\guill\Desktop\GestorDeIdentidades\3-DataAccess\GestorDeIdentidades.DataAccess\obj\Debug\GestorDeIdentidades.DataAccess.pdb
+C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\3-DataAccess\GestorDeIdentidades.DataAccess\bin\Debug\BCrypt.Net-Core.dll
+C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\3-DataAccess\GestorDeIdentidades.DataAccess\bin\Debug\BCrypt.Net-Core.pdb

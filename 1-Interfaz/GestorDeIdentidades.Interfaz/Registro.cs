@@ -42,5 +42,10 @@ namespace GestorDeIdentidades.Interfaz
                 label10.Text = "cheto";
             }
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

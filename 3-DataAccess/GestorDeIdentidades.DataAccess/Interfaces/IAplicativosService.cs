@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GestorDeIdentidades.Logic.Interfaces
+namespace GestorDeIdentidades.DataAccess.Interfaces
 {
-    public interface IPreguntaLogic
+    public interface IAplicativosService
     {
-        List<Preguntas> GetPreguntas();
+        List<Aplicativos> GetAplicativos();
     }
 }

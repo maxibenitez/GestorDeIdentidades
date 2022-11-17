@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace GestorDeIdentidades.DataAccess.Interfaces
 {
-    public interface IPreguntaRepository
+    public interface IPermisosService
     {
-        List<Preguntas> GetPreguntas();
+        List<Permiso> GetPermisos();
+
+        bool AddPersonaPermiso(Permiso permiso);
     }
 }

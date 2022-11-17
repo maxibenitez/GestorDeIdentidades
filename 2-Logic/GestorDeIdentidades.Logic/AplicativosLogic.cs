@@ -10,7 +10,7 @@ namespace GestorDeIdentidades.Logic
 {
     public class AplicativosLogic
     {
-        private AplicativosRepository _aplicativos = new AplicativosRepository();
+        private AplicativosService _aplicativos = new AplicativosService();
 
         public List<Aplicativos> GetAplicativos()
         {

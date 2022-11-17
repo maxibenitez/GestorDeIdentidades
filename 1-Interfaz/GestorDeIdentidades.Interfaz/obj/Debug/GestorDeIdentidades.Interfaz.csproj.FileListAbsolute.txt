@@ -40,3 +40,7 @@ C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interf
 C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.pdb
 C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.Login.resources
 C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.Registro.resources
+C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.Login.resources
+C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.Registro.resources
+C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\bin\Debug\BCrypt.Net-Core.dll
+C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\bin\Debug\BCrypt.Net-Core.pdb
