@@ -58,5 +58,21 @@ namespace GestorDeIdentidades.DataAccess.Implementation
                 return lastId;
             }
         }
+
+        public RolNegocioPersona GetRolNegPersona(int userId)
+        {
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                connection.Open();
+
+                const string query = @"SELECT * FROM vwRolNegocioPersona
+                                        WHERE user_id = @UserId";
+
+                var parameters = new DynamicParameters();
+                parameters.Add("@UserId", userId, DbType.Int32);
+
+                return connection.Query<RolNegocioPersona>(query, parameters, commandType: CommandType.Text).FirstOrDefault();
+            }
+        }
     }
 }
