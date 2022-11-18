@@ -24,7 +24,6 @@ namespace GestorDeIdentidades.Interfaz
 
         private void Registrarse()
         {
-            string usuario = InputUsuario.Text;
             string contrasena = InputContrasena.Text;
             string nombre = InputNombre.Text;
             string apellido = InputApellido.Text;
@@ -33,7 +32,7 @@ namespace GestorDeIdentidades.Interfaz
             string departamento = InputDepartamento.Text;
             string respuesta = InputRespuesta.Text;
 
-            if (usuario == "" || contrasena == "" || nombre == "" || apellido == "" || direccion == "" || ciudad == "" || departamento == "" || respuesta == "")
+            if ( contrasena == "" || nombre == "" || apellido == "" || direccion == "" || ciudad == "" || departamento == "" || respuesta == "")
             {
                 label10.Text = "error";
             }
@@ -44,6 +43,11 @@ namespace GestorDeIdentidades.Interfaz
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Registro_Load(object sender, EventArgs e)
         {
 
         }

@@ -46,5 +46,11 @@ namespace GestorDeIdentidades.Interfaz
             string usuario = InputUsuario.Text;
             string password = InputContrasena.Text;
         }
+
+        private void contrasenaOlvidada_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            var myForm = new RecuperarContrasena();
+            myForm.Show();
+        }
     }
 }

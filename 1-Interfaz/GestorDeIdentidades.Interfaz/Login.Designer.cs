@@ -35,6 +35,7 @@
             this.BotonRegistrarse = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.contrasenaOlvidada = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // InputUsuario
@@ -46,7 +47,7 @@
             // 
             // BotonLogin
             // 
-            this.BotonLogin.Location = new System.Drawing.Point(133, 168);
+            this.BotonLogin.Location = new System.Drawing.Point(130, 166);
             this.BotonLogin.Name = "BotonLogin";
             this.BotonLogin.Size = new System.Drawing.Size(75, 23);
             this.BotonLogin.TabIndex = 1;
@@ -74,7 +75,7 @@
             // BotonRegistrarse
             // 
             this.BotonRegistrarse.AutoSize = true;
-            this.BotonRegistrarse.Location = new System.Drawing.Point(145, 207);
+            this.BotonRegistrarse.Location = new System.Drawing.Point(136, 217);
             this.BotonRegistrarse.Name = "BotonRegistrarse";
             this.BotonRegistrarse.Size = new System.Drawing.Size(60, 13);
             this.BotonRegistrarse.TabIndex = 3;
@@ -100,6 +101,17 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Contraseña:";
             // 
+            // contrasenaOlvidada
+            // 
+            this.contrasenaOlvidada.AutoSize = true;
+            this.contrasenaOlvidada.Location = new System.Drawing.Point(96, 192);
+            this.contrasenaOlvidada.Name = "contrasenaOlvidada";
+            this.contrasenaOlvidada.Size = new System.Drawing.Size(146, 13);
+            this.contrasenaOlvidada.TabIndex = 3;
+            this.contrasenaOlvidada.TabStop = true;
+            this.contrasenaOlvidada.Text = "¿Ha olvidado su contraseña?";
+            this.contrasenaOlvidada.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.contrasenaOlvidada_LinkClicked);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -107,6 +119,7 @@
             this.ClientSize = new System.Drawing.Size(370, 271);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.contrasenaOlvidada);
             this.Controls.Add(this.BotonRegistrarse);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BotonLogin);
@@ -128,5 +141,6 @@
         private System.Windows.Forms.LinkLabel BotonRegistrarse;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.LinkLabel contrasenaOlvidada;
     }
 }

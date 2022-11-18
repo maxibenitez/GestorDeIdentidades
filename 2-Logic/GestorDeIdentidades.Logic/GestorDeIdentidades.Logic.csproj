@@ -46,8 +46,10 @@
   <ItemGroup>
     <Compile Include="AplicativosLogic.cs" />
     <Compile Include="Implementation\LoginLogic.cs" />
+    <Compile Include="Implementation\RecuperarContrasenaLogic.cs" />
     <Compile Include="Implementation\RegistroLogic.cs" />
     <Compile Include="Interfaces\ILoginLogic.cs" />
+    <Compile Include="Interfaces\IRecuperarContrasena.cs" />
     <Compile Include="Interfaces\IRegistroLogic.cs" />
     <Compile Include="PermisosLogic.cs" />
     <Compile Include="PreguntasLogic.cs" />

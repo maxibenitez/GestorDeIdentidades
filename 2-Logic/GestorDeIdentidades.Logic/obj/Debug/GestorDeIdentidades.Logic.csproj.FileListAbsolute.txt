@@ -26,3 +26,5 @@ C:\Users\guill\Desktop\GestorDeIdentidades\2-Logic\GestorDeIdentidades.Logic\obj
 C:\Users\guill\Desktop\GestorDeIdentidades\2-Logic\GestorDeIdentidades.Logic\obj\Debug\GestorDeIdentidades.Logic.pdb
 C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\2-Logic\GestorDeIdentidades.Logic\bin\Debug\BCrypt.Net-Core.dll
 C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\2-Logic\GestorDeIdentidades.Logic\bin\Debug\BCrypt.Net-Core.pdb
+C:\Users\guill\Desktop\GestorDeIdentidades\2-Logic\GestorDeIdentidades.Logic\bin\Debug\BCrypt.Net-Core.dll
+C:\Users\guill\Desktop\GestorDeIdentidades\2-Logic\GestorDeIdentidades.Logic\bin\Debug\BCrypt.Net-Core.pdb

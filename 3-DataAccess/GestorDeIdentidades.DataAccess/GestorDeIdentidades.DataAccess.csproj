@@ -64,8 +64,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Implementation\AplicativosService.cs" />
+    <Compile Include="Implementation\PersonasPreguntasService.cs" />
     <Compile Include="Implementation\NegocioService.cs" />
     <Compile Include="Implementation\PersonasService.cs" />
+    <Compile Include="Interfaces\IPersonasPreguntasService.cs" />
     <Compile Include="Interfaces\IAplicativosService.cs" />
     <Compile Include="Interfaces\INegocioService.cs" />
     <Compile Include="Interfaces\IPermisosService.cs" />
