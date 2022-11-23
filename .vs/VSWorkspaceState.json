@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\1-Interfaz",
+    "\\1-Interfaz\\GestorDeIdentidades.Interfaz",
+    "\\2-Logic",
+    "\\3-DataAccess",
+    "\\3-DataAccess\\GestorDeIdentidades.DataAccess",
+    "\\4-Models",
+    "\\4-Models\\GestorDeIdentidades.Models"
+  ],
+  "SelectedNode": "\\GestorDeIdentidades.sln",
+  "PreviewInSolutionExplorer": false
+}
