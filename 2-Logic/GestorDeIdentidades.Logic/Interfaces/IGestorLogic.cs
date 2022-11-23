@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GestorDeIdentidades.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,6 @@ namespace GestorDeIdentidades.Logic.Interfaces
 {
     public interface IGestorLogic
     {
+        bool GestionarPermisos(List<Permiso> permisos);
     }
 }

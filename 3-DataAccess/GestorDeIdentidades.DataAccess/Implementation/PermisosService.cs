@@ -28,6 +28,18 @@ namespace GestorDeIdentidades.DataAccess
             }
         }
 
+        public List<PermisoPendiente> GetPermisosPendientes()
+        {
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                connection.Open();
+
+                const string query = @"SELECT * FROM vwPermisosPendientes";
+
+                return connection.Query<PermisoPendiente>(query, CommandType.Text).ToList();
+            }
+        }
+
         public bool AddPersonaPermiso(Permiso permiso)
         {
             using (SqlConnection connection = new SqlConnection(ConnectionString))
@@ -70,9 +82,6 @@ namespace GestorDeIdentidades.DataAccess
 
                 var parameters = new DynamicParameters();
                 parameters.Add("@UserId", permiso.User_id, DbType.Int32);
-                parameters.Add("@AppId", permiso.App_id, DbType.Int32);
-                parameters.Add("@RolNegId", permiso.Rol_neg_id, DbType.Int32);
-                parameters.Add("@FechaSolicitud", permiso.Fecha_solicitud, DbType.Date);
                 parameters.Add("@FechaAutorizacion", permiso.Fecha_autorizacion, DbType.Date);
                 parameters.Add("@Estado", permiso.Estado, DbType.String);
 
