@@ -1,4 +1,5 @@
-﻿using GestorDeIdentidades.DataAccess.Interfaces;
+﻿using GestorDeIdentidades.DataAccess.Implementation;
+using GestorDeIdentidades.DataAccess.Interfaces;
 using GestorDeIdentidades.Logic.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -8,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace GestorDeIdentidades.Logic.Implementation
 {
-    public class RecuperarContrasenaLogic : IRecuperarContrasena
+    public class RecuperarContrasenaLogic
     {
-        private readonly IPersonasPreguntasService _personasPreguntasService;
+        private readonly PersonasPreguntasService _personasPreguntasService = new PersonasPreguntasService();
 
-        public RecuperarContrasenaLogic(IPersonasPreguntasService personasPreguntasService)
+        public RecuperarContrasenaLogic()
         {
-            _personasPreguntasService = personasPreguntasService;
+            
         }
 
         public bool checkPersonaPregunta(int user_id, int preg_id, string respuesta)

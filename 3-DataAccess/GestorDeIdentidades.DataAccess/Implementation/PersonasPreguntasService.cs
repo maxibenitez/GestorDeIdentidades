@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace GestorDeIdentidades.DataAccess.Implementation
 {
-    public class PersonasPreguntasService : IPersonasPreguntasService
+    public class PersonasPreguntasService
     {
         private string ConnectionString = ConfigurationManager.ConnectionStrings["GestorDeIdentidades"].ToString();
 
@@ -40,14 +40,14 @@ namespace GestorDeIdentidades.DataAccess.Implementation
             {
                 connection.Open();
 
-                const string query = @"SELECT COUNT(*) FROM Personas_Preguntas WHERE user_id = @User_ID AND preg_id = @Preg_ID AND respuesta = @Pregunta";
+                const string query = @"SELECT COUNT(*) FROM Personas_Preguntas WHERE user_id = @User_ID AND preg_id = @Preg_ID AND respuesta = @Respuesta";
 
                 var parameters = new DynamicParameters();
                 parameters.Add("@User_ID", persona, DbType.Int32);
                 parameters.Add("@Preg_ID", pregunta, DbType.Int32);
                 parameters.Add("@Respuesta", respuesta, DbType.String);
 
-                int cantidad = connection.Execute(query, parameters, commandType: CommandType.Text);
+                int cantidad = connection.Query<int>(query, parameters, commandType: CommandType.Text).FirstOrDefault();
                 if (cantidad == 0)
                 {
                     return false;
