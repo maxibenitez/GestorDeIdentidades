@@ -58,5 +58,25 @@ namespace GestorDeIdentidades.DataAccess.Implementation
                 return lastId;
             }
         }
-    }
+
+
+        public bool CambiarContraseña(int user_id, string nuevaCont)
+        {   
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                connection.Open();
+
+                const string query = @"SELECT * FROM Personas WHERE user_id = @UserId";
+
+                var parameters = new DynamicParameters();
+
+                               
+                parameters.Delete("@Hashpwd") // actualizar datos?               
+
+               parameters.Add("@Hashpwd", nuevaCont, DbType.Binary;
+
+                return connection.Execute(query, parameters, commandType.Text);
+
+
+            }
 }
