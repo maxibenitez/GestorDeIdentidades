@@ -10,7 +10,7 @@ namespace GestorDeIdentidades.Logic
 {
     public class PermisosLogic
     {
-        private PermisosRepository _permisos = new PermisosRepository();
+        private PermisosService _permisos = new PermisosService();
 
         public List<Permiso> GetPermisos()
         {

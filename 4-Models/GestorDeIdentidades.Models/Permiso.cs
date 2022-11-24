@@ -16,7 +16,7 @@ namespace GestorDeIdentidades.Models
 
         public DateTime Fecha_solicitud { get; set; }
 
-        public DateTime Fecha_autorizacion { get; set; }
+        public DateTime? Fecha_autorizacion { get; set; }
 
         public string Estado { get; set; }
     }

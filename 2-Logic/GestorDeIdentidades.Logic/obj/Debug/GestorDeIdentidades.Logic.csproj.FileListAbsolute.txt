@@ -11,3 +11,20 @@ C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatori
 C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\2-Logic\GestorDeIdentidades.Logic\obj\Debug\GestorDeIdentidades.Logic.csproj.CopyComplete
 C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\2-Logic\GestorDeIdentidades.Logic\obj\Debug\GestorDeIdentidades.Logic.dll
 C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\2-Logic\GestorDeIdentidades.Logic\obj\Debug\GestorDeIdentidades.Logic.pdb
+C:\Users\guill\Desktop\GestorDeIdentidades\2-Logic\GestorDeIdentidades.Logic\bin\Debug\GestorDeIdentidades.Logic.dll
+C:\Users\guill\Desktop\GestorDeIdentidades\2-Logic\GestorDeIdentidades.Logic\bin\Debug\GestorDeIdentidades.Logic.pdb
+C:\Users\guill\Desktop\GestorDeIdentidades\2-Logic\GestorDeIdentidades.Logic\bin\Debug\GestorDeIdentidades.DataAccess.dll
+C:\Users\guill\Desktop\GestorDeIdentidades\2-Logic\GestorDeIdentidades.Logic\bin\Debug\GestorDeIdentidades.Models.dll
+C:\Users\guill\Desktop\GestorDeIdentidades\2-Logic\GestorDeIdentidades.Logic\bin\Debug\Dapper.dll
+C:\Users\guill\Desktop\GestorDeIdentidades\2-Logic\GestorDeIdentidades.Logic\bin\Debug\GestorDeIdentidades.DataAccess.pdb
+C:\Users\guill\Desktop\GestorDeIdentidades\2-Logic\GestorDeIdentidades.Logic\bin\Debug\GestorDeIdentidades.Models.pdb
+C:\Users\guill\Desktop\GestorDeIdentidades\2-Logic\GestorDeIdentidades.Logic\bin\Debug\Dapper.xml
+C:\Users\guill\Desktop\GestorDeIdentidades\2-Logic\GestorDeIdentidades.Logic\obj\Debug\GestorDeIdentidades.Logic.csproj.AssemblyReference.cache
+C:\Users\guill\Desktop\GestorDeIdentidades\2-Logic\GestorDeIdentidades.Logic\obj\Debug\GestorDeIdentidades.Logic.csproj.CoreCompileInputs.cache
+C:\Users\guill\Desktop\GestorDeIdentidades\2-Logic\GestorDeIdentidades.Logic\obj\Debug\GestorDeIdentidades.Logic.csproj.CopyComplete
+C:\Users\guill\Desktop\GestorDeIdentidades\2-Logic\GestorDeIdentidades.Logic\obj\Debug\GestorDeIdentidades.Logic.dll
+C:\Users\guill\Desktop\GestorDeIdentidades\2-Logic\GestorDeIdentidades.Logic\obj\Debug\GestorDeIdentidades.Logic.pdb
+C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\2-Logic\GestorDeIdentidades.Logic\bin\Debug\BCrypt.Net-Core.dll
+C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\2-Logic\GestorDeIdentidades.Logic\bin\Debug\BCrypt.Net-Core.pdb
+C:\Users\guill\Desktop\GestorDeIdentidades\2-Logic\GestorDeIdentidades.Logic\bin\Debug\BCrypt.Net-Core.dll
+C:\Users\guill\Desktop\GestorDeIdentidades\2-Logic\GestorDeIdentidades.Logic\bin\Debug\BCrypt.Net-Core.pdb

@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BCrypt.Net-Core, Version=1.6.0.0, Culture=neutral, PublicKeyToken=4d63bfbfdfd3c6e4, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\BCrypt.Net-Core.1.6.0\lib\net452\BCrypt.Net-Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,6 +44,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AplicativosLogic.cs" />
+    <Compile Include="Implementation\LoginLogic.cs" />
+    <Compile Include="Implementation\RecuperarContrasenaLogic.cs" />
+    <Compile Include="Implementation\RegistroLogic.cs" />
+    <Compile Include="Interfaces\ILoginLogic.cs" />
+    <Compile Include="Interfaces\IRecuperarContrasena.cs" />
+    <Compile Include="Interfaces\IRegistroLogic.cs" />
     <Compile Include="PermisosLogic.cs" />
     <Compile Include="PreguntasLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -54,6 +64,9 @@
       <Project>{5bfe81da-8308-44e1-bb3d-b85511ffed3d}</Project>
       <Name>GestorDeIdentidades.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
