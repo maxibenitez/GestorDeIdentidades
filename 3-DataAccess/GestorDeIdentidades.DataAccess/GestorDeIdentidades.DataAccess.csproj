@@ -66,11 +66,6 @@
     <Compile Include="Implementation\AplicativosService.cs" />
     <Compile Include="Implementation\NegocioService.cs" />
     <Compile Include="Implementation\PersonasService.cs" />
-    <Compile Include="Interfaces\IAplicativosService.cs" />
-    <Compile Include="Interfaces\INegocioService.cs" />
-    <Compile Include="Interfaces\IPermisosService.cs" />
-    <Compile Include="Interfaces\IPersonasService.cs" />
-    <Compile Include="Interfaces\IPreguntasService.cs" />
     <Compile Include="Implementation\PermisosService.cs" />
     <Compile Include="Implementation\PreguntasService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

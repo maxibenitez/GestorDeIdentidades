@@ -1,5 +1,5 @@
-﻿using GestorDeIdentidades.DataAccess.Interfaces;
-using GestorDeIdentidades.Logic.Interfaces;
+﻿using GestorDeIdentidades.DataAccess.Implementation;
+using GestorDeIdentidades.DataAccess;
 using GestorDeIdentidades.Models;
 using System;
 using System.Collections.Generic;
@@ -9,26 +9,13 @@ using System.Threading.Tasks;
 
 namespace GestorDeIdentidades.Logic.Implementation
 {
-    public class RegistroLogic : IRegistroLogic
+    public class RegistroLogic
     {
-        private readonly IPersonasService _personasService;
-        private readonly IPermisosService _permisosService;
-        private readonly IPreguntasService _preguntasService;
-        private readonly IAplicativosService _aplicativosService;
-        private readonly INegocioService _negocioService;
-
-        public RegistroLogic(IPersonasService personasService, 
-                            IPermisosService permisosService, 
-                            IPreguntasService preguntasService, 
-                            IAplicativosService aplicativosService, 
-                            INegocioService negocioService)
-        {
-            _personasService = personasService;
-            _permisosService = permisosService;
-            _preguntasService = preguntasService;
-            _aplicativosService = aplicativosService;
-            _negocioService = negocioService;
-        }
+        private PermisosService _permisosService = new PermisosService();
+        private AplicativosService _aplicativosService = new AplicativosService();
+        private NegocioService _negocioService = new NegocioService();
+        private PersonasService _personasService = new PersonasService();
+        private PreguntasService _preguntasService = new PreguntasService();
 
         public List<Preguntas> GetPreguntas()
         {

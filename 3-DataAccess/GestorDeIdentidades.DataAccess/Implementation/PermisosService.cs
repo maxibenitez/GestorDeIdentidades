@@ -8,11 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dapper;
-using GestorDeIdentidades.DataAccess.Interfaces;
 
 namespace GestorDeIdentidades.DataAccess
 {
-    public class PermisosService : IPermisosService
+    public class PermisosService
     {
         private string ConnectionString = ConfigurationManager.ConnectionStrings["GestorDeIdentidades"].ToString();
 
@@ -25,6 +24,22 @@ namespace GestorDeIdentidades.DataAccess
                 const string query = @"SELECT * FROM Permisos";
 
                 return connection.Query<Permiso>(query, CommandType.Text).ToList();
+            }
+        }
+
+        public Permiso GetPersonaPermisos(int userId)
+        {
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                connection.Open();
+
+                const string query = @"SELECT * FROM Permisos
+                                        WHERE user_id = @UserId";
+
+                var parameters = new DynamicParameters();
+                parameters.Add("@UserId", userId, DbType.Int32);
+
+                return connection.Query<Permiso>(query, parameters, commandType: CommandType.Text).FirstOrDefault();
             }
         }
 

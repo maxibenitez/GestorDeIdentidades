@@ -8,11 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dapper;
-using GestorDeIdentidades.DataAccess.Interfaces;
 
 namespace GestorDeIdentidades.DataAccess
 {
-    public class AplicativosService : IAplicativosService
+    public class AplicativosService
     {
         private string ConnectionString = ConfigurationManager.ConnectionStrings["GestorDeIdentidades"].ToString();
 

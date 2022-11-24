@@ -1,5 +1,4 @@
-﻿using GestorDeIdentidades.DataAccess.Interfaces;
-using GestorDeIdentidades.Logic.Interfaces;
+﻿using GestorDeIdentidades.DataAccess;
 using GestorDeIdentidades.Models;
 using System;
 using System.Collections.Generic;
@@ -9,14 +8,9 @@ using System.Threading.Tasks;
 
 namespace GestorDeIdentidades.Logic.Implementation
 {
-    public class GestorLogic : IGestorLogic
+    public class GestorLogic
     {
-        private readonly IPermisosService _permisosService;
-
-        public GestorLogic(IPermisosService permisosService)
-        {
-            _permisosService = permisosService;
-        }
+        private PermisosService _permisosService = new PermisosService();
 
         public bool GestionarPermisos(List<Permiso> permisos)
         {

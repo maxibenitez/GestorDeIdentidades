@@ -1,7 +1,5 @@
 ﻿using GestorDeIdentidades.DataAccess.Implementation;
 using GestorDeIdentidades.DataAccess;
-using GestorDeIdentidades.DataAccess.Interfaces;
-using GestorDeIdentidades.Logic.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,30 +9,27 @@ using GestorDeIdentidades.Models;
 
 namespace GestorDeIdentidades.Logic.Implementation
 {
-    public class LoginLogic : ILoginLogic
+    public class LoginLogic
     {
-        private readonly IPersonasService _personasService;
-        private readonly IPreguntasService _preguntasService;
-
-        public LoginLogic(IPersonasService personasService, IPreguntasService preguntasService)
-        {
-            _personasService = personasService;
-            _preguntasService = preguntasService;
-        }
+        private PermisosService _permisosService = new PermisosService();
+        private PersonasService _personasService = new PersonasService();
+        private PreguntasService _preguntasService = new PreguntasService();
 
         public bool LoginPersona(int userId, string password, out bool isAdmin)
         {
             PersonaLoginInfo userSession = _personasService.DatosRegistroPersona(userId);
-            RolNegocioPersona rolPersona = _personasService.GetRolNegPersona(userId);
+            Permiso userPermiso = _permisosService.GetPersonaPermisos(userId);
 
             bool isValidPassword = false;
 
-            if(userSession != null)
+            // Si existe un usuario con ese ID, se chequea la contraseña
+            if (userSession != null)
             {
                 isValidPassword = BCrypt.Net.BCrypt.Verify(password, userSession.Password);
             }
 
-            if(rolPersona.DescripcionRolNeg.Equals("Gestionar usuarios"))
+            // Se chequea si el usuario tiene rol de administrador y su estado es activo
+            if (userPermiso.Rol_neg_id == 12 && userPermiso.Estado.Equals("Activo"))
             {
                 isAdmin = true;
             }

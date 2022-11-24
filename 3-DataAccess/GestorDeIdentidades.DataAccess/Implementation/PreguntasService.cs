@@ -1,5 +1,4 @@
 ﻿using Dapper;
-using GestorDeIdentidades.DataAccess.Interfaces;
 using GestorDeIdentidades.Models;
 using System;
 using System.Collections.Generic;
@@ -12,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace GestorDeIdentidades.DataAccess
 {
-    public class PreguntasService : IPreguntasService
+    public class PreguntasService
     {
         private string ConnectionString = ConfigurationManager.ConnectionStrings["GestorDeIdentidades"].ToString();
 

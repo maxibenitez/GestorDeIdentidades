@@ -7,12 +7,11 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using GestorDeIdentidades.DataAccess.Interfaces;
 using Dapper;
 
 namespace GestorDeIdentidades.DataAccess.Implementation
 {
-    public class PersonasService : IPersonasService
+    public class PersonasService
     {
         private string ConnectionString = ConfigurationManager.ConnectionStrings["GestorDeIdentidades"].ToString();
 
@@ -56,22 +55,6 @@ namespace GestorDeIdentidades.DataAccess.Implementation
                 int lastId = connection.Query<int>(query2, CommandType.Text).First();
 
                 return lastId;
-            }
-        }
-
-        public RolNegocioPersona GetRolNegPersona(int userId)
-        {
-            using (SqlConnection connection = new SqlConnection(ConnectionString))
-            {
-                connection.Open();
-
-                const string query = @"SELECT * FROM vwRolNegocioPersona
-                                        WHERE user_id = @UserId";
-
-                var parameters = new DynamicParameters();
-                parameters.Add("@UserId", userId, DbType.Int32);
-
-                return connection.Query<RolNegocioPersona>(query, parameters, commandType: CommandType.Text).FirstOrDefault();
             }
         }
     }
