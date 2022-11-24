@@ -1,6 +1,4 @@
 ﻿using GestorDeIdentidades.Logic;
-using GestorDeIdentidades.Logic.Implementation;
-using GestorDeIdentidades.Logic.Interfaces;
 using GestorDeIdentidades.Models;
 using System;
 using System.Collections.Generic;

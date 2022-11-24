@@ -63,12 +63,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Implementation\AplicativosService.cs" />
-    <Compile Include="Implementation\PersonasPreguntasService.cs" />
-    <Compile Include="Implementation\NegocioService.cs" />
-    <Compile Include="Implementation\PersonasService.cs" />
-    <Compile Include="Implementation\PermisosService.cs" />
-    <Compile Include="Implementation\PreguntasService.cs" />
+    <Compile Include="AplicativosService.cs" />
+    <Compile Include="PersonasPreguntasService.cs" />
+    <Compile Include="NegocioService.cs" />
+    <Compile Include="PersonasService.cs" />
+    <Compile Include="PermisosService.cs" />
+    <Compile Include="PreguntasService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

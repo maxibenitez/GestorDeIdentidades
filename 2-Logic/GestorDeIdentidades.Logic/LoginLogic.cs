@@ -1,5 +1,4 @@
-﻿using GestorDeIdentidades.DataAccess.Implementation;
-using GestorDeIdentidades.DataAccess;
+﻿using GestorDeIdentidades.DataAccess;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using GestorDeIdentidades.Models;
 
-namespace GestorDeIdentidades.Logic.Implementation
+namespace GestorDeIdentidades.Logic
 {
     public class LoginLogic
     {

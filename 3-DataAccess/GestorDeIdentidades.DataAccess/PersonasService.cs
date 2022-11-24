@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Dapper;
 
-namespace GestorDeIdentidades.DataAccess.Implementation
+namespace GestorDeIdentidades.DataAccess
 {
     public class PersonasService
     {

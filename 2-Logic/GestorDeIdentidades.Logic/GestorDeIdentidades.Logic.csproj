@@ -45,17 +45,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AplicativosLogic.cs" />
-    <Compile Include="Implementation\GestorLogic.cs" />
-    <Compile Include="Implementation\LoginLogic.cs" />
-    <Compile Include="Implementation\RecuperarContrasenaLogic.cs" />
-    <Compile Include="Implementation\RegistroLogic.cs" />
+    <Compile Include="GestorLogic.cs" />
+    <Compile Include="LoginLogic.cs" />
+    <Compile Include="RecuperarContrasenaLogic.cs" />
+    <Compile Include="RegistroLogic.cs" />
     <Compile Include="PermisosLogic.cs" />
     <Compile Include="PreguntasLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\3-DataAccess\GestorDeIdentidades.DataAccess\GestorDeIdentidades.DataAccess.csproj">
-      <Project>{afd11cba-4869-484e-a394-afea329bf611}</Project>
+      <Project>{AFD11CBA-4869-484E-A394-AFEA329BF611}</Project>
       <Name>GestorDeIdentidades.DataAccess</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\4-Models\GestorDeIdentidades.Models\GestorDeIdentidades.Models.csproj">
