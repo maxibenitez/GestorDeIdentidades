@@ -7,12 +7,11 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using GestorDeIdentidades.DataAccess.Interfaces;
 using Dapper;
 
 namespace GestorDeIdentidades.DataAccess.Implementation
 {
-    public class PersonasService : IPersonasService
+    public class PersonasService
     {
         private string ConnectionString = ConfigurationManager.ConnectionStrings["GestorDeIdentidades"].ToString();
 

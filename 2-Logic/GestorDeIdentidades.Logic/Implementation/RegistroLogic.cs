@@ -1,5 +1,5 @@
-﻿using GestorDeIdentidades.DataAccess.Interfaces;
-using GestorDeIdentidades.Logic.Interfaces;
+﻿using GestorDeIdentidades.DataAccess.Implementation;
+using GestorDeIdentidades.DataAccess;
 using GestorDeIdentidades.Models;
 using System;
 using System.Collections.Generic;
@@ -9,26 +9,13 @@ using System.Threading.Tasks;
 
 namespace GestorDeIdentidades.Logic.Implementation
 {
-    public class RegistroLogic : IRegistroLogic
+    public class RegistroLogic
     {
-        private readonly IPersonasService _personasService;
-        private readonly IPermisosService _permisosService;
-        private readonly IPreguntasService _preguntasService;
-        private readonly IAplicativosService _aplicativosService;
-        private readonly INegocioService _negocioService;
-
-        public RegistroLogic(IPersonasService personasService, 
-                            IPermisosService permisosService, 
-                            IPreguntasService preguntasService, 
-                            IAplicativosService aplicativosService, 
-                            INegocioService negocioService)
-        {
-            _personasService = personasService;
-            _permisosService = permisosService;
-            _preguntasService = preguntasService;
-            _aplicativosService = aplicativosService;
-            _negocioService = negocioService;
-        }
+        private PermisosService _permisosService = new PermisosService();
+        private AplicativosService _aplicativosService = new AplicativosService();
+        private NegocioService _negocioService = new NegocioService();
+        private PersonasService _personasService = new PersonasService();
+        private PreguntasService _preguntasService = new PreguntasService();
 
         public List<Preguntas> GetPreguntas()
         {
@@ -45,7 +32,7 @@ namespace GestorDeIdentidades.Logic.Implementation
             return _negocioService.GetRolesNegocio();
         }
 
-        public bool RegistrarPersona(RegistroPersona persona)
+        public int RegistrarPersona(RegistroPersona persona)
         {
             // Ingresa nueva persona
             var hashpwd = BCrypt.Net.BCrypt.HashPassword(persona.Password);
@@ -62,37 +49,33 @@ namespace GestorDeIdentidades.Logic.Implementation
 
             int newUserId = _personasService.AddPersona(nuevaPersona);
 
-            // Ingresa pregunta y respuesta de nueva persona
-            var nuevaPersonaPregunta = new PersonaPregunta()
+            if(newUserId != null)
             {
-                User_id = newUserId,
-                Preg_id = persona.Preg_id,
-                Respuesta = persona.Respuesta
-            };
+                // Ingresa pregunta y respuesta de nueva persona
+                var nuevaPersonaPregunta = new PersonaPregunta()
+                {
+                    User_id = newUserId,
+                    Preg_id = persona.Preg_id,
+                    Respuesta = persona.Respuesta
+                };
 
-            bool respuesta1 = _preguntasService.AddPersonaPregunta(nuevaPersonaPregunta);
+                _preguntasService.AddPersonaPregunta(nuevaPersonaPregunta);
 
-            // Ingresa solicitud de permisos de nueva persona
-            var nuevoPermiso = new Permiso()
-            {
-                User_id = newUserId,
-                App_id = persona.App_id,
-                Rol_neg_id = persona.Rol_neg_id,
-                Fecha_solicitud = DateTime.Now,
-                Fecha_autorizacion = null,
-                Estado = "Pendiente"
-            };
+                // Ingresa solicitud de permisos de nueva persona
+                var nuevoPermiso = new Permiso()
+                {
+                    User_id = newUserId,
+                    App_id = persona.App_id,
+                    Rol_neg_id = persona.Rol_neg_id,
+                    Fecha_solicitud = DateTime.Now,
+                    Fecha_autorizacion = null,
+                    Estado = "Pendiente"
+                };
 
-            bool respuesta2 = _permisosService.AddPersonaPermiso(nuevoPermiso);
-
-            if(respuesta1 && respuesta2)
-            {
-                return true;
+                _permisosService.AddPersonaPermiso(nuevoPermiso);
             }
-            else
-            {
-                return false;
-            }
+
+            return newUserId;
         }
     }
 }

@@ -58,6 +58,18 @@
     <Compile Include="RecuperarContrasena.Designer.cs">
       <DependentUpon>RecuperarContrasena.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gestor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestor.Designer.cs">
+      <DependentUpon>Gestor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestorPermisos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestorPermisos.Designer.cs">
+      <DependentUpon>GestorPermisos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +86,12 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestor.resx">
+      <DependentUpon>Gestor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestorPermisos.resx">
+      <DependentUpon>GestorPermisos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

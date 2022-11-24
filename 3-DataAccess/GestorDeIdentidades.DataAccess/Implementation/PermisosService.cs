@@ -27,6 +27,34 @@ namespace GestorDeIdentidades.DataAccess
             }
         }
 
+        public Permiso GetPersonaPermisos(int userId)
+        {
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                connection.Open();
+
+                const string query = @"SELECT * FROM Permisos
+                                        WHERE user_id = @UserId";
+
+                var parameters = new DynamicParameters();
+                parameters.Add("@UserId", userId, DbType.Int32);
+
+                return connection.Query<Permiso>(query, parameters, commandType: CommandType.Text).FirstOrDefault();
+            }
+        }
+
+        public List<PermisoPendiente> GetPermisosPendientes()
+        {
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                connection.Open();
+
+                const string query = @"SELECT * FROM vwPermisosPendientes";
+
+                return connection.Query<PermisoPendiente>(query, CommandType.Text).ToList();
+            }
+        }
+
         public bool AddPersonaPermiso(Permiso permiso)
         {
             using (SqlConnection connection = new SqlConnection(ConnectionString))
@@ -41,6 +69,34 @@ namespace GestorDeIdentidades.DataAccess
                 parameters.Add("@AppId", permiso.App_id, DbType.Int32);
                 parameters.Add("@RolNegId", permiso.Rol_neg_id, DbType.Int32);
                 parameters.Add("@FechaSolicitud", permiso.Fecha_solicitud, DbType.Date);
+                parameters.Add("@FechaAutorizacion", permiso.Fecha_autorizacion, DbType.Date);
+                parameters.Add("@Estado", permiso.Estado, DbType.String);
+
+                var result = connection.Execute(query, parameters, commandType: CommandType.Text);
+
+                if (result != 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
+        public bool UpdatePersonaPermiso(Permiso permiso)
+        {
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                connection.Open();
+
+                const string query = @"UPDATE Permisos
+                                        SET fecha_autorizacion = @FechaAutorizacion, estado = @Estado
+                                        WHERE user_id = @UserId";
+
+                var parameters = new DynamicParameters();
+                parameters.Add("@UserId", permiso.User_id, DbType.Int32);
                 parameters.Add("@FechaAutorizacion", permiso.Fecha_autorizacion, DbType.Date);
                 parameters.Add("@Estado", permiso.Estado, DbType.String);
 

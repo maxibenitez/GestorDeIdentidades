@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Aplicativos.cs" />
     <Compile Include="Permiso.cs" />
+    <Compile Include="PermisoPendiente.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="PersonaLoginInfo.cs" />
     <Compile Include="PersonaPregunta.cs" />

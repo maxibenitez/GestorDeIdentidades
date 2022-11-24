@@ -1,5 +1,4 @@
-﻿using GestorDeIdentidades.DataAccess.Interfaces;
-using GestorDeIdentidades.Models;
+﻿using GestorDeIdentidades.Models;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -12,7 +11,7 @@ using Dapper;
 
 namespace GestorDeIdentidades.DataAccess.Implementation
 {
-    public class NegocioService : INegocioService
+    public class NegocioService
     {
         private string ConnectionString = ConfigurationManager.ConnectionStrings["GestorDeIdentidades"].ToString();
 

@@ -24,6 +24,7 @@ namespace GestorDeIdentidades.Interfaz
 
         private void Registrarse()
         {
+            string usuario = "pape";//InputUsuario.Text;
             string contrasena = InputContrasena.Text;
             string nombre = InputNombre.Text;
             string apellido = InputApellido.Text;
