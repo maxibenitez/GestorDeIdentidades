@@ -28,14 +28,22 @@ namespace GestorDeIdentidades.DataAccess
                                         WHERE nombres = @Nombres AND apellidos = @Apellidos";
 
                 string[] persona = usuario.Split(' ');
-                string nombres = persona[0];
-                string apellidos = persona[1]; //chequear cuando solo le mandan un string sin espacios
+                
+                if (persona.Length > 1)
+                {
+                    string nombres = persona[0];
+                    string apellidos = persona[1];
 
-                var parameters = new DynamicParameters();
-                parameters.Add("@Nombres", nombres, DbType.String);
-                parameters.Add("@Apellidos", apellidos, DbType.String);
+                    var parameters = new DynamicParameters();
+                    parameters.Add("@Nombres", nombres, DbType.String);
+                    parameters.Add("@Apellidos", apellidos, DbType.String);
 
-                return connection.Query<int>(query, parameters, commandType: CommandType.Text).FirstOrDefault();
+                    return connection.Query<int>(query, parameters, commandType: CommandType.Text).FirstOrDefault();
+                }
+                else
+                {
+                    return 0;
+                }
             }
         }
 

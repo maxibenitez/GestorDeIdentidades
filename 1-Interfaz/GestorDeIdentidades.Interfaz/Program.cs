@@ -16,7 +16,7 @@ namespace GestorDeIdentidades.Interfaz
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Gestor());
+            Application.Run(new Login());
         }
     }
 }

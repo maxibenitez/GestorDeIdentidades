@@ -41,10 +41,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.estados = new System.Windows.Forms.ComboBox();
             this.errorMessage = new System.Windows.Forms.Label();
-            this.labelPersona = new System.Windows.Forms.Label();
-            this.labelAplicativo = new System.Windows.Forms.Label();
-            this.labelRolNeg = new System.Windows.Forms.Label();
-            this.labelFechaSol = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label7
@@ -166,51 +162,11 @@
             this.errorMessage.Size = new System.Drawing.Size(0, 13);
             this.errorMessage.TabIndex = 46;
             // 
-            // labelPersona
-            // 
-            this.labelPersona.AutoSize = true;
-            this.labelPersona.Location = new System.Drawing.Point(135, 65);
-            this.labelPersona.Name = "labelPersona";
-            this.labelPersona.Size = new System.Drawing.Size(68, 13);
-            this.labelPersona.TabIndex = 47;
-            this.labelPersona.Text = "labelPersona";
-            // 
-            // labelAplicativo
-            // 
-            this.labelAplicativo.AutoSize = true;
-            this.labelAplicativo.Location = new System.Drawing.Point(138, 99);
-            this.labelAplicativo.Name = "labelAplicativo";
-            this.labelAplicativo.Size = new System.Drawing.Size(35, 13);
-            this.labelAplicativo.TabIndex = 48;
-            this.labelAplicativo.Text = "label3";
-            // 
-            // labelRolNeg
-            // 
-            this.labelRolNeg.AutoSize = true;
-            this.labelRolNeg.Location = new System.Drawing.Point(138, 134);
-            this.labelRolNeg.Name = "labelRolNeg";
-            this.labelRolNeg.Size = new System.Drawing.Size(35, 13);
-            this.labelRolNeg.TabIndex = 49;
-            this.labelRolNeg.Text = "label2";
-            // 
-            // labelFechaSol
-            // 
-            this.labelFechaSol.AutoSize = true;
-            this.labelFechaSol.Location = new System.Drawing.Point(138, 169);
-            this.labelFechaSol.Name = "labelFechaSol";
-            this.labelFechaSol.Size = new System.Drawing.Size(35, 13);
-            this.labelFechaSol.TabIndex = 50;
-            this.labelFechaSol.Text = "label2";
-            // 
             // EditarPermiso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(467, 312);
-            this.Controls.Add(this.labelFechaSol);
-            this.Controls.Add(this.labelRolNeg);
-            this.Controls.Add(this.labelAplicativo);
-            this.Controls.Add(this.labelPersona);
             this.Controls.Add(this.errorMessage);
             this.Controls.Add(this.estados);
             this.Controls.Add(this.label12);
@@ -245,9 +201,5 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox estados;
         private System.Windows.Forms.Label errorMessage;
-        private System.Windows.Forms.Label labelPersona;
-        private System.Windows.Forms.Label labelAplicativo;
-        private System.Windows.Forms.Label labelRolNeg;
-        private System.Windows.Forms.Label labelFechaSol;
     }
 }

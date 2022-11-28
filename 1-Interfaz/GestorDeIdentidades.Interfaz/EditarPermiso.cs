@@ -18,25 +18,19 @@ namespace GestorDeIdentidades.Interfaz
     {
         private readonly GestorLogic _gestorLogic = new GestorLogic();
         public int user_id;
-        public String persona;
-        public String app;
-        public String rolneg;
-        public String fechasol;
-        public String estado;
 
-        public EditarPermiso(String user_id, String persona, String app, String rolneg, String fechasol, String estado)
+        public EditarPermiso(Permiso permiso)
         {
             InitializeComponent();
-            var userid = user_id;
-            labelPersona.Text = persona;
-            labelAplicativo.Text = app;
-            labelRolNeg.Text = rolneg;
-            labelFechaSol.Text = fechasol;
-            estados.Text = estado;
+            user_id = permiso.User_id;
+            nombre.Text = permiso.NombrePersona;
+            aplicativo.Text = permiso.NombreApp;
+            rolNegocio.Text = permiso.Descripcion_rol_neg;
+            fecha.Text = permiso.Fecha_solicitud.ToShortDateString();
+            estados.Text = permiso.Estado;
             estados.Items.Add("Pendiente");
             estados.Items.Add("Activo");
             estados.Items.Add("Denegado");
-            this.user_id = Int32.Parse(user_id);
         }
 
         private void actualizarPermiso_Click(object sender, EventArgs e)
