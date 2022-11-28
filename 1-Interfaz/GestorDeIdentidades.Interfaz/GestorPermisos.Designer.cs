@@ -39,56 +39,60 @@
             // 
             // tablaPermisos
             // 
+            this.tablaPermisos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.tablaPermisos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tablaPermisos.Location = new System.Drawing.Point(40, 138);
+            this.tablaPermisos.Location = new System.Drawing.Point(12, 136);
             this.tablaPermisos.Name = "tablaPermisos";
-            this.tablaPermisos.Size = new System.Drawing.Size(554, 239);
+            this.tablaPermisos.Size = new System.Drawing.Size(849, 239);
             this.tablaPermisos.TabIndex = 1;
+            this.tablaPermisos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaPermisos_CellClick);
             // 
             // bTodos
             // 
             this.bTodos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bTodos.Location = new System.Drawing.Point(40, 84);
+            this.bTodos.Location = new System.Drawing.Point(219, 84);
             this.bTodos.Name = "bTodos";
             this.bTodos.Size = new System.Drawing.Size(94, 23);
             this.bTodos.TabIndex = 2;
             this.bTodos.Text = "Todos";
             this.bTodos.UseVisualStyleBackColor = true;
-            this.bTodos.Click += new System.EventHandler(this.button1_Click);
+            this.bTodos.Click += new System.EventHandler(this.bTodos_Click);
             // 
             // bActivos
             // 
-            this.bActivos.Location = new System.Drawing.Point(150, 84);
+            this.bActivos.Location = new System.Drawing.Point(343, 84);
             this.bActivos.Name = "bActivos";
             this.bActivos.Size = new System.Drawing.Size(94, 23);
             this.bActivos.TabIndex = 3;
             this.bActivos.Text = "Activos";
             this.bActivos.UseVisualStyleBackColor = true;
-            this.bActivos.Click += new System.EventHandler(this.button2_Click);
+            this.bActivos.Click += new System.EventHandler(this.bActivos_Click);
             // 
             // bDenegados
             // 
-            this.bDenegados.Location = new System.Drawing.Point(260, 84);
+            this.bDenegados.Location = new System.Drawing.Point(461, 84);
             this.bDenegados.Name = "bDenegados";
             this.bDenegados.Size = new System.Drawing.Size(94, 23);
             this.bDenegados.TabIndex = 4;
             this.bDenegados.Text = "Denegados";
             this.bDenegados.UseVisualStyleBackColor = true;
+            this.bDenegados.Click += new System.EventHandler(this.bDenegados_Click);
             // 
             // bPendientes
             // 
-            this.bPendientes.Location = new System.Drawing.Point(372, 84);
+            this.bPendientes.Location = new System.Drawing.Point(579, 84);
             this.bPendientes.Name = "bPendientes";
             this.bPendientes.Size = new System.Drawing.Size(94, 23);
             this.bPendientes.TabIndex = 5;
             this.bPendientes.Text = "Pendientes";
             this.bPendientes.UseVisualStyleBackColor = true;
+            this.bPendientes.Click += new System.EventHandler(this.bPendientes_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(297, 35);
+            this.label7.Location = new System.Drawing.Point(365, 38);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(169, 22);
             this.label7.TabIndex = 18;
@@ -98,7 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(642, 413);
+            this.ClientSize = new System.Drawing.Size(898, 444);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.bPendientes);
             this.Controls.Add(this.bDenegados);

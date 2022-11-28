@@ -23,6 +23,9 @@ namespace GestorDeIdentidades.Interfaz
         private void BotonLogin_Click(object sender, EventArgs e)
         {
             LoginAction();
+            var myFrom = new GestorPermisos();
+            myFrom.Show();
+            this.Hide();
         }
 
         private void LoginAction()

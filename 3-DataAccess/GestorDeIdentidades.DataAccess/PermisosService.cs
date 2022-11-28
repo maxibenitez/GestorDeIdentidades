@@ -21,7 +21,7 @@ namespace GestorDeIdentidades.DataAccess
             {
                 connection.Open();
 
-                const string query = @"SELECT * FROM vwPermisos";
+                const string query = @"SELECT * FROM [GestorDeIdentidades].[dbo].[vwPermisos]";
 
                 return connection.Query<Permiso>(query, CommandType.Text).ToList();
             }
@@ -50,7 +50,33 @@ namespace GestorDeIdentidades.DataAccess
                 connection.Open();
 
                 const string query = @"SELECT * FROM vwPermisos
-                                        WHERE P.estado = 'Pendiente'";
+                                        WHERE estado = 'Pendiente'";
+
+                return connection.Query<Permiso>(query, CommandType.Text).ToList();
+            }
+        }
+
+        public List<Permiso> GetPermisosActivos()
+        {
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                connection.Open();
+
+                const string query = @"SELECT * FROM vwPermisos
+                                        WHERE estado = 'Activo'";
+
+                return connection.Query<Permiso>(query, CommandType.Text).ToList();
+            }
+        }
+
+        public List<Permiso> GetPermisosDenegados()
+        {
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                connection.Open();
+
+                const string query = @"SELECT * FROM vwPermisos
+                                        WHERE estado = 'Denegado'";
 
                 return connection.Query<Permiso>(query, CommandType.Text).ToList();
             }

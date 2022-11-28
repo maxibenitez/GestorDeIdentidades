@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="GestorLogic.cs" />
     <Compile Include="LoginLogic.cs" />
+    <Compile Include="PermisosLogic.cs" />
     <Compile Include="RegistroLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
