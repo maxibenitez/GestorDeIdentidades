@@ -25,6 +25,7 @@ namespace GestorDeIdentidades.Interfaz
             LoginAction();
             var myFrom = new GestorPermisos();
             myFrom.Show();
+            this.Hide();
         }
 
         private void RegisterLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

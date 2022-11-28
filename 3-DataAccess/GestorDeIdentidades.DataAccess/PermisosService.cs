@@ -21,7 +21,7 @@ namespace GestorDeIdentidades.DataAccess
             {
                 connection.Open();
 
-                const string query = @"SELECT * FROM vwPermisos";
+                const string query = @"SELECT * FROM [GestorDeIdentidades].[dbo].[vwPermisos]";
 
                 return connection.Query<Permiso>(query, CommandType.Text).ToList();
             }

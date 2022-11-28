@@ -64,11 +64,12 @@ namespace GestorDeIdentidades.Interfaz
             this.app_id = this.tablaPermisos.Rows[e.RowIndex].Cells["app_id"].Value.ToString();
             this.nombreapp = this.tablaPermisos.Rows[e.RowIndex].Cells["nombreapp"].Value.ToString();
             this.rol_neg_id = this.tablaPermisos.Rows[e.RowIndex].Cells["rol_neg_id"].Value.ToString();
-            this.rol_neg = this.tablaPermisos.Rows[e.RowIndex].Cells["DescripcionRolNeg"].Value.ToString();
+            this.rol_neg = this.tablaPermisos.Rows[e.RowIndex].Cells["descripcion_rol_neg"].Value.ToString();
             this.fecha_solicitud = this.tablaPermisos.Rows[e.RowIndex].Cells["fecha_solicitud"].Value.ToString();
             this.estado = this.tablaPermisos.Rows[e.RowIndex].Cells["estado"].Value.ToString();
-            var myFrom = new EditarPermiso(this.userid, this.nombrePersona, this.nombreapp, this.rol_neg_id, this.fecha_solicitud, this.estado);
+            var myFrom = new EditarPermiso(this.userid, this.nombrePersona, this.nombreapp, this.rol_neg, this.fecha_solicitud, this.estado);
             myFrom.Show();
+            this.Hide();
         }
 
     }

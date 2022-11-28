@@ -53,6 +53,8 @@ namespace GestorDeIdentidades.Interfaz
 
             if (result)
             {
+                var myForm = new GestorPermisos();
+                myForm.Show();
                 this.Hide();
             }
             else
