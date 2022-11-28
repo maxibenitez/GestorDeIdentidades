@@ -44,11 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AplicativosLogic.cs" />
     <Compile Include="GestorLogic.cs" />
     <Compile Include="LoginLogic.cs" />
     <Compile Include="RegistroLogic.cs" />
-    <Compile Include="PreguntasLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

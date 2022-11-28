@@ -44,7 +44,6 @@
     <Compile Include="Aplicativo.cs" />
     <Compile Include="Permiso.cs" />
     <Compile Include="Persona.cs" />
-    <Compile Include="PersonaLoginInfo.cs" />
     <Compile Include="PersonaPregunta.cs" />
     <Compile Include="Preguntas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

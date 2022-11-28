@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GestorDeIdentidades.Models;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace GestorDeIdentidades.Logic
 {
@@ -14,18 +16,22 @@ namespace GestorDeIdentidades.Logic
         private PersonasService _personasService = new PersonasService();
         private PreguntasService _preguntasService = new PreguntasService();
 
-        public bool LoginPersona(int userId, string password, out bool isAdmin)
+        public int GetPersonaId(string usuario)
         {
-            PersonaLoginInfo userSession = _personasService.DatosRegistroPersona(userId);
-            Permiso userPermiso = _permisosService.GetPersonaPermisos(userId);
+            return _personasService.GetPersonaId(usuario);
+        }
 
-            bool isValidPassword = false;
+        public List<Preguntas> GetPreguntas()
+        {
+            return _preguntasService.GetPreguntas();
+        }
 
-            // Si existe un usuario con ese ID, se chequea la contraseña
-            if (userSession != null)
-            {
-                isValidPassword = BCrypt.Net.BCrypt.Verify(password, userSession.Password);
-            }
+        public bool LoginPersona(int user_id, string password, out bool isAdmin)
+        {
+            Permiso userPermiso = _permisosService.GetPersonaPermisos(user_id);
+            string userPassword = _personasService.CheckContraseña(user_id);
+
+            bool isValidPassword = BCrypt.Net.BCrypt.Verify(password, userPassword);
 
             // Se chequea si el usuario tiene rol de administrador y su estado es activo
             if (userPermiso.Rol_neg_id == 12 && userPermiso.Estado.Equals("Activo"))
@@ -42,9 +48,16 @@ namespace GestorDeIdentidades.Logic
 
         public bool CambiarContraseña(int user_id, string nuevaCont)
         {
-            var nuevaContHashed = BCrypt.Net.BCrypt.HashPassword(nuevaCont);
+            string nuevaContHashed = BCrypt.Net.BCrypt.HashPassword(nuevaCont);
 
             return _personasService.CambiarContraseña(user_id, nuevaContHashed);
+        }
+
+        public bool CheckContraseña(int user_id, string nuevaCont)
+        {
+            string password = _personasService.CheckContraseña(user_id);
+
+            return BCrypt.Net.BCrypt.Verify(nuevaCont, password);
         }
 
         public bool CheckPersonaPregunta(int user_id, int preg_id, string respuesta)

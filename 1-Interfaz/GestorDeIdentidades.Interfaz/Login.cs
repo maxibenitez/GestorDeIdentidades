@@ -20,28 +20,60 @@ namespace GestorDeIdentidades.Interfaz
             InitializeComponent();
         }
 
-        private void LoginButton_Click(object sender, EventArgs e)
+        private void BotonLogin_Click(object sender, EventArgs e)
         {
             LoginAction();
-        }
-
-        private void RegisterLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Hide();
-            var myForm = new Registro();
-            myForm.Show();
         }
 
         private void LoginAction()
         {
             string usuario = InputUsuario.Text;
             string password = InputContrasena.Text;
+            bool isAdmin;
+
+            int user_id = _loginLogic.GetPersonaId(usuario);
+
+            if (user_id != 0)
+            {
+                bool resp = _loginLogic.LoginPersona(user_id, password, out isAdmin);
+
+                if (resp)
+                {
+                    if (isAdmin)
+                    {
+                        this.Hide();
+                        var gestor = new Gestor();
+                        gestor.Show();
+                    }
+                    else
+                    {
+                        this.Hide();
+                        //var dummy = new Dummy();
+                        //dummy.Show();        
+                    }
+                }
+                else
+                {
+                    errorMessage.Text = "Usuario o contraseña incorrecta!";
+                }
+            }
+            else
+            {
+                errorMessage.Text = "Usuario o contraseña incorrecta!";
+            }
         }
 
         private void contrasenaOlvidada_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
             var myForm = new RecuperarContrasena();
+            myForm.Show();
+        }
+
+        private void RegisterLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            var myForm = new Registro();
             myForm.Show();
         }
     }

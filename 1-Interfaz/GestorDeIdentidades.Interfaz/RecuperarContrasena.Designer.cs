@@ -29,15 +29,14 @@
         private void InitializeComponent()
         {
             this.buttonConfirmar = new System.Windows.Forms.Button();
-            this.comboPreguntas = new System.Windows.Forms.ComboBox();
+            this.InputPregunta = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.respuestaInput = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.usuarioInput = new System.Windows.Forms.NumericUpDown();
             this.errorMessage = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioInput)).BeginInit();
+            this.usuarioInput = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // buttonConfirmar
@@ -50,14 +49,14 @@
             this.buttonConfirmar.UseVisualStyleBackColor = true;
             this.buttonConfirmar.Click += new System.EventHandler(this.buttonConfirmar_Click);
             // 
-            // comboPreguntas
+            // InputPregunta
             // 
-            this.comboPreguntas.FormattingEnabled = true;
-            this.comboPreguntas.Location = new System.Drawing.Point(126, 92);
-            this.comboPreguntas.Name = "comboPreguntas";
-            this.comboPreguntas.Size = new System.Drawing.Size(221, 21);
-            this.comboPreguntas.TabIndex = 1;
-            this.comboPreguntas.SelectedIndexChanged += new System.EventHandler(this.comboPreguntas_SelectedIndexChanged);
+            this.InputPregunta.FormattingEnabled = true;
+            this.InputPregunta.Location = new System.Drawing.Point(126, 92);
+            this.InputPregunta.Name = "InputPregunta";
+            this.InputPregunta.Size = new System.Drawing.Size(221, 21);
+            this.InputPregunta.TabIndex = 1;
+            //this.InputPregunta.SelectedIndexChanged += new System.EventHandler(this.comboPreguntas_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -84,7 +83,7 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Pregunta\r\nde seguridad:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            //this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -105,13 +104,6 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Recuperar Contraseña";
             // 
-            // usuarioInput
-            // 
-            this.usuarioInput.Location = new System.Drawing.Point(126, 59);
-            this.usuarioInput.Name = "usuarioInput";
-            this.usuarioInput.Size = new System.Drawing.Size(221, 20);
-            this.usuarioInput.TabIndex = 6;
-            // 
             // errorMessage
             // 
             this.errorMessage.AutoSize = true;
@@ -121,23 +113,29 @@
             this.errorMessage.Size = new System.Drawing.Size(0, 13);
             this.errorMessage.TabIndex = 7;
             // 
+            // usuarioInput
+            // 
+            this.usuarioInput.Location = new System.Drawing.Point(126, 58);
+            this.usuarioInput.Name = "usuarioInput";
+            this.usuarioInput.Size = new System.Drawing.Size(221, 20);
+            this.usuarioInput.TabIndex = 8;
+            // 
             // RecuperarContrasena
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(468, 237);
-            this.Controls.Add(this.errorMessage);
             this.Controls.Add(this.usuarioInput);
+            this.Controls.Add(this.errorMessage);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.respuestaInput);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboPreguntas);
+            this.Controls.Add(this.InputPregunta);
             this.Controls.Add(this.buttonConfirmar);
             this.Name = "RecuperarContrasena";
             this.Text = "Recuperar Contraseña";
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioInput)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,13 +144,13 @@
         #endregion
 
         private System.Windows.Forms.Button buttonConfirmar;
-        private System.Windows.Forms.ComboBox comboPreguntas;
+        private System.Windows.Forms.ComboBox InputPregunta;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox respuestaInput;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown usuarioInput;
         private System.Windows.Forms.Label errorMessage;
+        private System.Windows.Forms.TextBox usuarioInput;
     }
 }

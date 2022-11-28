@@ -16,60 +16,54 @@ namespace GestorDeIdentidades.Interfaz
 
     public partial class RecuperarContrasena : Form
     {
-        private LoginLogic _recuperarContra = new LoginLogic();
-        public List<Preguntas> preguntas = new PreguntasLogic().GetPreguntas();
+        private readonly LoginLogic _loginLogic = new LoginLogic();
 
         public RecuperarContrasena()
         {
             InitializeComponent();
+
+            List<Preguntas> preguntas = _loginLogic.GetPreguntas();
+
             foreach (Preguntas pregunta in preguntas)
             {
-                comboPreguntas.Items.Add(pregunta.Pregunta);
+                InputPregunta.Items.Add($"{pregunta.Preg_id}. {pregunta.Pregunta}");
             }
         }
 
         private void buttonConfirmar_Click(object sender, EventArgs e)
         {
-            int usuario = Convert.ToInt32(usuarioInput.Value);
-            string preguntaInput = comboPreguntas.Text;
+            string usuario = usuarioInput.Text;
             string respuesta = respuestaInput.Text;
-            int preguntaID = 0;
+            string[] pregunta = InputPregunta.Text.Split(new char[] { '.' });
 
-            if ( usuario == 0 || preguntaInput == "" || respuesta == "")
+            if ( usuario == "" || pregunta.Length == 0 || respuesta == "")
             {
-                //error
+                errorMessage.Text = "Debe completar todos los campos!";
             }
             else
             {
-                foreach (Preguntas pregunta in preguntas)
-                {
-                    if (pregunta.Pregunta == preguntaInput)
-                    {
-                        preguntaID = pregunta.Preg_id;
-                    }
-                }
+                int pregId = Int32.Parse(pregunta[0]);
+                int user_id = _loginLogic.GetPersonaId(usuario);
 
-                if (_recuperarContra.CheckPersonaPregunta(usuario, preguntaID, respuesta))
+                if(user_id != 0)
                 {
-                    this.Hide();
-                    var nuevaContrasena = new NuevaContrasena();
-                    nuevaContrasena.Show();
+                    if (_loginLogic.CheckPersonaPregunta(user_id, pregId, respuesta))
+                    {
+                        this.Hide();
+                        var nuevaContrasena = new NuevaContrasena(user_id);
+                        nuevaContrasena.Show();
+                    }
+                    else
+                    {
+                        errorMessage.Text = "La respuesta es incorrecta!";
+                    }
                 }
                 else
                 {
-                    errorMessage.Text = "La respuesta es incorrecta!";
+                    errorMessage.Text = "Usuario incorrecto!";
                 }
+                
             }
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboPreguntas_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

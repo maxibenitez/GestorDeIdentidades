@@ -36,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.contrasenaOlvidada = new System.Windows.Forms.LinkLabel();
+            this.errorMessage = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // InputUsuario
@@ -53,7 +54,7 @@
             this.BotonLogin.TabIndex = 1;
             this.BotonLogin.Text = "Login";
             this.BotonLogin.UseVisualStyleBackColor = true;
-            this.BotonLogin.Click += new System.EventHandler(this.LoginButton_Click);
+            this.BotonLogin.Click += new System.EventHandler(this.BotonLogin_Click);
             // 
             // label1
             // 
@@ -112,11 +113,21 @@
             this.contrasenaOlvidada.Text = "¿Ha olvidado su contraseña?";
             this.contrasenaOlvidada.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.contrasenaOlvidada_LinkClicked);
             // 
+            // errorMessage
+            // 
+            this.errorMessage.AutoSize = true;
+            this.errorMessage.ForeColor = System.Drawing.Color.Red;
+            this.errorMessage.Location = new System.Drawing.Point(161, 125);
+            this.errorMessage.Name = "errorMessage";
+            this.errorMessage.Size = new System.Drawing.Size(0, 13);
+            this.errorMessage.TabIndex = 6;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(462, 235);
+            this.Controls.Add(this.errorMessage);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.contrasenaOlvidada);
@@ -142,5 +153,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.LinkLabel contrasenaOlvidada;
+        private System.Windows.Forms.Label errorMessage;
     }
 }

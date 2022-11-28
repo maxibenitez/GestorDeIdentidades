@@ -44,7 +44,6 @@
             this.label5.Size = new System.Drawing.Size(157, 22);
             this.label5.TabIndex = 6;
             this.label5.Text = "Nueva Contraseña";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // buttonCambiar
             // 
@@ -54,6 +53,7 @@
             this.buttonCambiar.TabIndex = 9;
             this.buttonCambiar.Text = "Cambiar Contraseña";
             this.buttonCambiar.UseVisualStyleBackColor = true;
+            this.buttonCambiar.Click += new System.EventHandler(this.buttonCambiar_Click);
             // 
             // contraInput
             // 
@@ -77,9 +77,8 @@
             this.errorMessage.ForeColor = System.Drawing.Color.Red;
             this.errorMessage.Location = new System.Drawing.Point(124, 147);
             this.errorMessage.Name = "errorMessage";
-            this.errorMessage.Size = new System.Drawing.Size(226, 13);
+            this.errorMessage.Size = new System.Drawing.Size(0, 13);
             this.errorMessage.TabIndex = 10;
-            this.errorMessage.Text = "La contraseña no puede ser igual a la anterior!";
             // 
             // NuevaContrasena
             // 
