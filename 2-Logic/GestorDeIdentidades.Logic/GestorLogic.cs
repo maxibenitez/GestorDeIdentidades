@@ -12,24 +12,18 @@ namespace GestorDeIdentidades.Logic
     {
         private PermisosService _permisosService = new PermisosService();
 
-        public bool GestionarPermisos(List<Permiso> permisos)
+        public List<Permiso> GetPermisos()
         {
-            List<PermisoPendiente> permisosPendientes = _permisosService.GetPermisosPendientes();
+            List<Permiso> permisos = _permisosService.GetPermisos();
 
-            foreach(Permiso permiso in permisos)
-            {
-                _permisosService.UpdatePersonaPermiso(permiso);
-                permisos.Remove(permiso);
-            }
+            return permisos;
+        }
 
-            if(permisos.Count() == 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+        public bool EditarPermiso(int userId, string estado)
+        {
+            bool result = _permisosService.EditarPermiso(userId, estado);
+
+            return result;
         }
     }
 }

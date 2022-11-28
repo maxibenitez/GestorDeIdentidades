@@ -21,7 +21,7 @@ namespace GestorDeIdentidades.DataAccess
             {
                 connection.Open();
 
-                const string query = @"SELECT * FROM Permisos";
+                const string query = @"SELECT * FROM vwPermisos";
 
                 return connection.Query<Permiso>(query, CommandType.Text).ToList();
             }
@@ -33,7 +33,7 @@ namespace GestorDeIdentidades.DataAccess
             {
                 connection.Open();
 
-                const string query = @"SELECT * FROM Permisos
+                const string query = @"SELECT * FROM vwPermisos
                                         WHERE user_id = @UserId";
 
                 var parameters = new DynamicParameters();
@@ -43,15 +43,16 @@ namespace GestorDeIdentidades.DataAccess
             }
         }
 
-        public List<PermisoPendiente> GetPermisosPendientes()
+        public List<Permiso> GetPermisosPendientes()
         {
             using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
                 connection.Open();
 
-                const string query = @"SELECT * FROM vwPermisosPendientes";
+                const string query = @"SELECT * FROM vwPermisos
+                                        WHERE P.estado = 'Pendiente'";
 
-                return connection.Query<PermisoPendiente>(query, CommandType.Text).ToList();
+                return connection.Query<Permiso>(query, CommandType.Text).ToList();
             }
         }
 
@@ -85,7 +86,7 @@ namespace GestorDeIdentidades.DataAccess
             }
         }
 
-        public bool UpdatePersonaPermiso(Permiso permiso)
+        public bool EditarPermiso(int userId, string estado)
         {
             using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
@@ -96,9 +97,9 @@ namespace GestorDeIdentidades.DataAccess
                                         WHERE user_id = @UserId";
 
                 var parameters = new DynamicParameters();
-                parameters.Add("@UserId", permiso.User_id, DbType.Int32);
-                parameters.Add("@FechaAutorizacion", permiso.Fecha_autorizacion, DbType.Date);
-                parameters.Add("@Estado", permiso.Estado, DbType.String);
+                parameters.Add("@UserId", userId, DbType.Int32);
+                parameters.Add("@FechaAutorizacion", DateTime.Now, DbType.Date);
+                parameters.Add("@Estado", estado, DbType.String);
 
                 var result = connection.Execute(query, parameters, commandType: CommandType.Text);
 

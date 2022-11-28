@@ -45,9 +45,9 @@ namespace GestorDeIdentidades.Logic
             throw new NotImplementedException();
         }
 
-        public string RecuperarPassword(string respuesta)
+        public bool CheckPersonaPregunta(int user_id, int preg_id, string respuesta)
         {
-            throw new NotImplementedException();
+            return _preguntasService.CheckPersonaPregunta(user_id, preg_id, respuesta);
         }
     }
 }

@@ -53,5 +53,33 @@ namespace GestorDeIdentidades.DataAccess
                 }
             }
         }
+
+        public bool CheckPersonaPregunta(int persona, int pregunta, string respuesta)
+        {
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                connection.Open();
+
+                const string query = @"SELECT COUNT(*) 
+                                        FROM Personas_Preguntas 
+                                        WHERE user_id = @User_ID AND preg_id = @Preg_ID AND respuesta = @Respuesta";
+
+                var parameters = new DynamicParameters();
+                parameters.Add("@User_ID", persona, DbType.Int32);
+                parameters.Add("@Preg_ID", pregunta, DbType.Int32);
+                parameters.Add("@Respuesta", respuesta, DbType.String);
+
+                int cantidad = connection.Query<int>(query, parameters, commandType: CommandType.Text).FirstOrDefault();
+
+                if (cantidad == 0)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+        }
     }
 }

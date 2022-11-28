@@ -15,7 +15,7 @@ namespace GestorDeIdentidades.DataAccess
     {
         private string ConnectionString = ConfigurationManager.ConnectionStrings["GestorDeIdentidades"].ToString();
 
-        public List<Aplicativos> GetAplicativos()
+        public List<Aplicativo> GetAplicativos()
         {
             using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
@@ -23,7 +23,7 @@ namespace GestorDeIdentidades.DataAccess
 
                 const string query = @"SELECT * FROM Aplicativos";
 
-                return connection.Query<Aplicativos>(query, CommandType.Text).ToList();
+                return connection.Query<Aplicativo>(query, CommandType.Text).ToList();
             }
         }
     }
