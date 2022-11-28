@@ -50,7 +50,7 @@
             // bTodos
             // 
             this.bTodos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bTodos.Location = new System.Drawing.Point(40, 84);
+            this.bTodos.Location = new System.Drawing.Point(219, 84);
             this.bTodos.Name = "bTodos";
             this.bTodos.Size = new System.Drawing.Size(94, 23);
             this.bTodos.TabIndex = 2;
@@ -60,7 +60,7 @@
             // 
             // bActivos
             // 
-            this.bActivos.Location = new System.Drawing.Point(150, 84);
+            this.bActivos.Location = new System.Drawing.Point(343, 84);
             this.bActivos.Name = "bActivos";
             this.bActivos.Size = new System.Drawing.Size(94, 23);
             this.bActivos.TabIndex = 3;
@@ -70,7 +70,7 @@
             // 
             // bDenegados
             // 
-            this.bDenegados.Location = new System.Drawing.Point(260, 84);
+            this.bDenegados.Location = new System.Drawing.Point(461, 84);
             this.bDenegados.Name = "bDenegados";
             this.bDenegados.Size = new System.Drawing.Size(94, 23);
             this.bDenegados.TabIndex = 4;
@@ -80,7 +80,7 @@
             // 
             // bPendientes
             // 
-            this.bPendientes.Location = new System.Drawing.Point(372, 84);
+            this.bPendientes.Location = new System.Drawing.Point(579, 84);
             this.bPendientes.Name = "bPendientes";
             this.bPendientes.Size = new System.Drawing.Size(94, 23);
             this.bPendientes.TabIndex = 5;
@@ -92,7 +92,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(297, 35);
+            this.label7.Location = new System.Drawing.Point(365, 38);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(169, 22);
             this.label7.TabIndex = 18;
