@@ -40,9 +40,11 @@ namespace GestorDeIdentidades.Logic
             return isValidPassword;
         }
 
-        public bool NuevoPassword(string password)
+        public bool CambiarContraseña(int user_id, string nuevaCont)
         {
-            throw new NotImplementedException();
+            var nuevaContHashed = BCrypt.Net.BCrypt.HashPassword(nuevaCont);
+
+            return _personasService.CambiarContraseña(user_id, nuevaContHashed);
         }
 
         public bool CheckPersonaPregunta(int user_id, int preg_id, string respuesta)
