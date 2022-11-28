@@ -39,11 +39,13 @@
             // 
             // tablaPermisos
             // 
+            this.tablaPermisos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.tablaPermisos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tablaPermisos.Location = new System.Drawing.Point(40, 138);
+            this.tablaPermisos.Location = new System.Drawing.Point(12, 136);
             this.tablaPermisos.Name = "tablaPermisos";
-            this.tablaPermisos.Size = new System.Drawing.Size(554, 239);
+            this.tablaPermisos.Size = new System.Drawing.Size(849, 239);
             this.tablaPermisos.TabIndex = 1;
+            this.tablaPermisos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaPermisos_CellClick);
             // 
             // bTodos
             // 
@@ -54,7 +56,7 @@
             this.bTodos.TabIndex = 2;
             this.bTodos.Text = "Todos";
             this.bTodos.UseVisualStyleBackColor = true;
-            this.bTodos.Click += new System.EventHandler(this.button1_Click);
+            this.bTodos.Click += new System.EventHandler(this.bTodos_Click);
             // 
             // bActivos
             // 
@@ -64,7 +66,7 @@
             this.bActivos.TabIndex = 3;
             this.bActivos.Text = "Activos";
             this.bActivos.UseVisualStyleBackColor = true;
-            this.bActivos.Click += new System.EventHandler(this.button2_Click);
+            this.bActivos.Click += new System.EventHandler(this.bActivos_Click);
             // 
             // bDenegados
             // 
@@ -74,6 +76,7 @@
             this.bDenegados.TabIndex = 4;
             this.bDenegados.Text = "Denegados";
             this.bDenegados.UseVisualStyleBackColor = true;
+            this.bDenegados.Click += new System.EventHandler(this.bDenegados_Click);
             // 
             // bPendientes
             // 
@@ -83,6 +86,7 @@
             this.bPendientes.TabIndex = 5;
             this.bPendientes.Text = "Pendientes";
             this.bPendientes.UseVisualStyleBackColor = true;
+            this.bPendientes.Click += new System.EventHandler(this.bPendientes_Click);
             // 
             // label7
             // 
@@ -98,7 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(642, 413);
+            this.ClientSize = new System.Drawing.Size(898, 444);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.bPendientes);
             this.Controls.Add(this.bDenegados);

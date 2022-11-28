@@ -23,6 +23,8 @@ namespace GestorDeIdentidades.Interfaz
         private void LoginButton_Click(object sender, EventArgs e)
         {
             LoginAction();
+            var myFrom = new GestorPermisos();
+            myFrom.Show();
         }
 
         private void RegisterLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
