@@ -60,22 +60,22 @@ namespace GestorDeIdentidades.DataAccess.Implementation
         }
 
 
-        public bool CambiarContraseña(int user_id, string nuevaCont)
+        public bool CambiarContraseña(int user_id, string nuevaContHashed)
         {   
             using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
                 connection.Open();
 
-                const string query = @"SELECT * FROM Personas WHERE user_id = @UserId";
+                const string query = @"UPDATE Personas SET Hashpwd = @nuevaContHashed WHERE user_id = @user_id;
 
                 var parameters = new DynamicParameters();
 
-                               
-                parameters.Delete("@Hashpwd") // actualizar datos?               
+             
+               parameters.Add("@nuevaContHashed", nuevaContHashed, DbType.Binary);
+               parameters.Add("@user_id", user_id, DbType.Int32);
 
-               parameters.Add("@Hashpwd", nuevaCont, DbType.Binary;
 
-                return connection.Execute(query, parameters, commandType.Text);
+              return connection.Execute(query, parameters, commandType.Text);
 
 
             }

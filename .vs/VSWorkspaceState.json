@@ -4,11 +4,13 @@
     "\\1-Interfaz",
     "\\1-Interfaz\\GestorDeIdentidades.Interfaz",
     "\\2-Logic",
+    "\\2-Logic\\GestorDeIdentidades.Logic",
+    "\\2-Logic\\GestorDeIdentidades.Logic\\Implementation",
+    "\\2-Logic\\GestorDeIdentidades.Logic\\Interfaces",
     "\\3-DataAccess",
     "\\3-DataAccess\\GestorDeIdentidades.DataAccess",
-    "\\4-Models",
-    "\\4-Models\\GestorDeIdentidades.Models"
+    "\\3-DataAccess\\GestorDeIdentidades.DataAccess\\Interfaces"
   ],
-  "SelectedNode": "\\GestorDeIdentidades.sln",
+  "SelectedNode": "\\3-DataAccess\\GestorDeIdentidades.DataAccess\\Implementation\\PersonasService.cs",
   "PreviewInSolutionExplorer": false
 }
