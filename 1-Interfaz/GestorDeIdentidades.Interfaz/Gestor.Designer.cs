@@ -51,6 +51,7 @@
             this.bAplicativos.TabIndex = 10;
             this.bAplicativos.Text = "Gestión de Aplicativos";
             this.bAplicativos.UseVisualStyleBackColor = true;
+            this.bAplicativos.Click += new System.EventHandler(this.bAplicativos_Click);
             // 
             // bPermisos
             // 
@@ -60,6 +61,7 @@
             this.bPermisos.TabIndex = 11;
             this.bPermisos.Text = "Gestión de Permisos";
             this.bPermisos.UseVisualStyleBackColor = true;
+            this.bPermisos.Click += new System.EventHandler(this.bPermisos_Click);
             // 
             // Gestor
             // 

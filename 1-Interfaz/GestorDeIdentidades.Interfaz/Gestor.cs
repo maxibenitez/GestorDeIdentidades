@@ -20,15 +20,15 @@ namespace GestorDeIdentidades.Interfaz
         private void bAplicativos_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var gestorPermisos = new GestorPermisos();
-            gestorPermisos.Show();
+            var gestorAplicativos = new GestorAplicativos();
+            gestorAplicativos.Show();
         }
 
         private void bPermisos_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var gestorAplicativos = new GestorAplicativos();
-            gestorAplicativos.Show();
+            var gestorPermisos = new GestorPermisos();
+            gestorPermisos.Show();
         }
     }
 }

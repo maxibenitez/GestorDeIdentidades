@@ -18,7 +18,7 @@ namespace GestorDeIdentidades.Models
 
         public int Rol_neg_id { get; set; }
 
-        public string DescripcionRolNeg { get; set; }
+        public string Descripcion_rol_neg{ get; set; }
 
         public DateTime Fecha_solicitud { get; set; }
 
