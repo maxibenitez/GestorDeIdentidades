@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GestorDeIdentidades.Logic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,35 +13,25 @@ namespace GestorDeIdentidades.Interfaz
 {
     public partial class Login : Form
     {
+        private readonly LoginLogic _loginLogic = new LoginLogic();
+
         public Login()
         {
             InitializeComponent();
         }
 
-        /// <summary>
-        /// Click al boton de Login
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void LoginButton_Click(object sender, EventArgs e)
         {
             LoginAction();
         }
 
-        /// <summary>
-        /// Click al boton de registro, aparece el Form de registro
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void RegisterLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Hide();
             var myForm = new Registro();
             myForm.Show();
         }
 
-        /// <summary>
-        /// Logica del Login
-        /// </summary>
         private void LoginAction()
         {
             string usuario = InputUsuario.Text;
@@ -49,6 +40,7 @@ namespace GestorDeIdentidades.Interfaz
 
         private void contrasenaOlvidada_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Hide();
             var myForm = new RecuperarContrasena();
             myForm.Show();
         }

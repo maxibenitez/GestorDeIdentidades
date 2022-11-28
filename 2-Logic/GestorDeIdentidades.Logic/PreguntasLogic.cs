@@ -11,11 +11,11 @@ namespace GestorDeIdentidades.Logic
     public class PreguntasLogic
     {
 
-        private PreguntasService _preguntas = new PreguntasService();
+        private PreguntasService _preguntasService = new PreguntasService();
 
         public List<Preguntas> GetPreguntas()
         {
-            return _preguntas.GetPreguntas();
+            return _preguntasService.GetPreguntas();
         }
     }
 }

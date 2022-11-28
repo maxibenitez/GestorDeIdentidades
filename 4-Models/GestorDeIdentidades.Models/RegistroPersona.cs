@@ -22,8 +22,6 @@ namespace GestorDeIdentidades.Models
 
         public int Preg_id { get; set; }
 
-        public string Pregunta { get; set; }
-
         public string Respuesta { get; set; }
 
         public int App_id { get; set; }

@@ -64,7 +64,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AplicativosService.cs" />
-    <Compile Include="PersonasPreguntasService.cs" />
     <Compile Include="NegocioService.cs" />
     <Compile Include="PersonasService.cs" />
     <Compile Include="PermisosService.cs" />

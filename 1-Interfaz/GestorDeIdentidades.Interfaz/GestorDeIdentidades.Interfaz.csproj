@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="EditarPermiso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="EditarPermiso.Designer.cs">
+      <DependentUpon>EditarPermiso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestorAplicativos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestorAplicativos.Designer.cs">
+      <DependentUpon>GestorAplicativos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevaContrasena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevaContrasena.Designer.cs">
+      <DependentUpon>NuevaContrasena.cs</DependentUpon>
     </Compile>
     <Compile Include="RecuperarContrasena.cs">
       <SubType>Form</SubType>
@@ -84,17 +96,23 @@
     <Compile Include="Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="EditarPermiso.resx">
+      <DependentUpon>EditarPermiso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gestor.resx">
       <DependentUpon>Gestor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestorAplicativos.resx">
+      <DependentUpon>GestorAplicativos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestorPermisos.resx">
       <DependentUpon>GestorPermisos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevaContrasena.resx">
+      <DependentUpon>NuevaContrasena.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

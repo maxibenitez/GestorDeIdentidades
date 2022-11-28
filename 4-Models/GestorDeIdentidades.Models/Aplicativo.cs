@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GestorDeIdentidades.Models
 {
-    public class Aplicativos
+    public class Aplicativo
     {
         public int App_id { get; set; }
 
