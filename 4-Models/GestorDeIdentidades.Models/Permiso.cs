@@ -10,9 +10,15 @@ namespace GestorDeIdentidades.Models
     {
         public int User_id { get; set; }
 
+        public string NombrePersona { get; set; }
+
         public int App_id { get; set; }
 
+        public string NombreApp { get; set; }
+
         public int Rol_neg_id { get; set; }
+
+        public string DescripcionRolNeg { get; set; }
 
         public DateTime Fecha_solicitud { get; set; }
 

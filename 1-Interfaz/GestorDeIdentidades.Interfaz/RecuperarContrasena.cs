@@ -16,8 +16,9 @@ namespace GestorDeIdentidades.Interfaz
 
     public partial class RecuperarContrasena : Form
     {
-        private RecuperarContrasenaLogic _recuperarcontra = new RecuperarContrasenaLogic();
+        private LoginLogic _recuperarContra = new LoginLogic();
         public List<Preguntas> preguntas = new PreguntasLogic().GetPreguntas();
+
         public RecuperarContrasena()
         {
             InitializeComponent();
@@ -48,15 +49,27 @@ namespace GestorDeIdentidades.Interfaz
                     }
                 }
 
-                if (_recuperarcontra.checkPersonaPregunta(usuario, preguntaID, respuesta))
+                if (_recuperarContra.CheckPersonaPregunta(usuario, preguntaID, respuesta))
                 {
-                    label6.Text = "exito";
+                    this.Hide();
+                    var nuevaContrasena = new NuevaContrasena();
+                    nuevaContrasena.Show();
                 }
                 else
                 {
-                    label6.Text = "error";
+                    errorMessage.Text = "La respuesta es incorrecta!";
                 }
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboPreguntas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

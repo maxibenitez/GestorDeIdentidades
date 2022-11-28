@@ -12,7 +12,7 @@ namespace GestorDeIdentidades.Logic
     {
         private AplicativosService _aplicativos = new AplicativosService();
 
-        public List<Aplicativos> GetAplicativos()
+        public List<Aplicativo> GetAplicativos()
         {
             return _aplicativos.GetAplicativos();
         }

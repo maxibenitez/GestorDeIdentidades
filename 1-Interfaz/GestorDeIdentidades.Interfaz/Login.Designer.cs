@@ -40,16 +40,16 @@
             // 
             // InputUsuario
             // 
-            this.InputUsuario.Location = new System.Drawing.Point(148, 83);
+            this.InputUsuario.Location = new System.Drawing.Point(130, 64);
             this.InputUsuario.Name = "InputUsuario";
-            this.InputUsuario.Size = new System.Drawing.Size(100, 20);
+            this.InputUsuario.Size = new System.Drawing.Size(221, 20);
             this.InputUsuario.TabIndex = 0;
             // 
             // BotonLogin
             // 
-            this.BotonLogin.Location = new System.Drawing.Point(130, 166);
+            this.BotonLogin.Location = new System.Drawing.Point(130, 143);
             this.BotonLogin.Name = "BotonLogin";
-            this.BotonLogin.Size = new System.Drawing.Size(75, 23);
+            this.BotonLogin.Size = new System.Drawing.Size(221, 23);
             this.BotonLogin.TabIndex = 1;
             this.BotonLogin.Text = "Login";
             this.BotonLogin.UseVisualStyleBackColor = true;
@@ -59,7 +59,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(95, 30);
+            this.label1.Location = new System.Drawing.Point(149, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(162, 22);
             this.label1.TabIndex = 2;
@@ -67,15 +67,15 @@
             // 
             // InputContrasena
             // 
-            this.InputContrasena.Location = new System.Drawing.Point(148, 126);
+            this.InputContrasena.Location = new System.Drawing.Point(130, 99);
             this.InputContrasena.Name = "InputContrasena";
-            this.InputContrasena.Size = new System.Drawing.Size(100, 20);
+            this.InputContrasena.Size = new System.Drawing.Size(221, 20);
             this.InputContrasena.TabIndex = 0;
             // 
             // BotonRegistrarse
             // 
             this.BotonRegistrarse.AutoSize = true;
-            this.BotonRegistrarse.Location = new System.Drawing.Point(136, 217);
+            this.BotonRegistrarse.Location = new System.Drawing.Point(208, 205);
             this.BotonRegistrarse.Name = "BotonRegistrarse";
             this.BotonRegistrarse.Size = new System.Drawing.Size(60, 13);
             this.BotonRegistrarse.TabIndex = 3;
@@ -86,7 +86,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(96, 86);
+            this.label2.Location = new System.Drawing.Point(78, 67);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 4;
@@ -95,7 +95,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(78, 129);
+            this.label3.Location = new System.Drawing.Point(60, 102);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 13);
             this.label3.TabIndex = 5;
@@ -104,7 +104,7 @@
             // contrasenaOlvidada
             // 
             this.contrasenaOlvidada.AutoSize = true;
-            this.contrasenaOlvidada.Location = new System.Drawing.Point(96, 192);
+            this.contrasenaOlvidada.Location = new System.Drawing.Point(166, 179);
             this.contrasenaOlvidada.Name = "contrasenaOlvidada";
             this.contrasenaOlvidada.Size = new System.Drawing.Size(146, 13);
             this.contrasenaOlvidada.TabIndex = 3;
@@ -116,7 +116,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(370, 271);
+            this.ClientSize = new System.Drawing.Size(462, 235);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.contrasenaOlvidada);

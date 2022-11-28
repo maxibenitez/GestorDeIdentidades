@@ -21,7 +21,7 @@ namespace GestorDeIdentidades.Logic
             return _preguntasService.GetPreguntas();
         }
 
-        public List<Aplicativos> GetAplicativos()
+        public List<Aplicativo> GetAplicativos()
         {
             return _aplicativosService.GetAplicativos();
         }
@@ -31,7 +31,7 @@ namespace GestorDeIdentidades.Logic
             return _negocioService.GetRolesNegocio();
         }
 
-        public int RegistrarPersona(RegistroPersona persona)
+        public bool RegistrarPersona(RegistroPersona persona)
         {
             // Ingresa nueva persona
             var hashpwd = BCrypt.Net.BCrypt.HashPassword(persona.Password);
@@ -58,7 +58,7 @@ namespace GestorDeIdentidades.Logic
                     Respuesta = persona.Respuesta
                 };
 
-                _preguntasService.AddPersonaPregunta(nuevaPersonaPregunta);
+                bool respuesta = _preguntasService.AddPersonaPregunta(nuevaPersonaPregunta);
 
                 // Ingresa solicitud de permisos de nueva persona
                 var nuevoPermiso = new Permiso()
@@ -71,10 +71,21 @@ namespace GestorDeIdentidades.Logic
                     Estado = "Pendiente"
                 };
 
-                _permisosService.AddPersonaPermiso(nuevoPermiso);
-            }
+                bool respuesta1 = _permisosService.AddPersonaPermiso(nuevoPermiso);
 
-            return newUserId;
+                if (respuesta && respuesta1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
