@@ -88,20 +88,6 @@ namespace GestorDeIdentidades.Interfaz
                 {
                     InputRolesAplicativos.Items.Add($"{rolA.Rol_id}. {rolA.Descripcion_rol}", false);
                 }
-                /*
-                foreach (var rolB in rolNegAplicativos)
-                {
-                    if(rolB.Rol_id == rolA.Rol_id)
-                    {
-                        InputRolesAplicativos.Items.Add($"{rolA.Rol_id}. {rolA.Descripcion_rol}", true);
-                    }
-                    else
-                    {
-                        InputRolesAplicativos.Items.Add($"{rolA.Rol_id}. {rolA.Descripcion_rol}", false);
-                    }
-                }
-                */
-
             }
         }
     }
