@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,19 +23,37 @@ namespace GestorDeIdentidades.Interfaz
             InitializeComponent();
             this.user_id = user_id;
 
+            InputAplicativos.Hide();
+            listaMenu.Hide();
+            label9.Hide();
+            label1.Hide();
+            permisoMessage.Hide();
+
             List<Aplicativo> aplicativosOriginal = _dummyLogic.GetAplicativosDummy(user_id);
             List<string> appStrings = new List<String>();
 
-            foreach (Aplicativo aplicativo in aplicativosOriginal)
+            if(aplicativosOriginal.Count() == 0)
             {
-                appStrings.Add($"{aplicativo.App_id}. {aplicativo.NombreApp}");
+                permisoMessage.Show();
             }
-
-            List<string> appsstrings = appStrings.Distinct().ToList();
-
-            foreach (string app in appsstrings)
+            else
             {
-                InputAplicativos.Items.Add(app);
+                InputAplicativos.Show();
+                listaMenu.Show();
+                label9.Show();
+                label1.Show();
+
+                foreach (Aplicativo aplicativo in aplicativosOriginal)
+                {
+                    appStrings.Add($"{aplicativo.App_id}. {aplicativo.NombreApp}");
+                }
+
+                List<string> appsstrings = appStrings.Distinct().ToList();
+
+                foreach (string app in appsstrings)
+                {
+                    InputAplicativos.Items.Add(app);
+                }
             }
         }
 

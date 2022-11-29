@@ -63,7 +63,7 @@ namespace GestorDeIdentidades.Logic
             foreach (int rol in rolesId)
             {
                 _aplicativosService.AgregarRolesNegocioAplicativos(rol_neg_id, app_id, rol);
-            }
+            }      
         }
     }
 }

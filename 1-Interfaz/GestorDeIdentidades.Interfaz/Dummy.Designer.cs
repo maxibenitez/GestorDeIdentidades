@@ -34,6 +34,7 @@
             this.InputAplicativos = new System.Windows.Forms.ComboBox();
             this.listaMenu = new System.Windows.Forms.ListBox();
             this.botonVolver = new System.Windows.Forms.Button();
+            this.permisoMessage = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label7
@@ -91,11 +92,22 @@
             this.botonVolver.UseVisualStyleBackColor = true;
             this.botonVolver.Click += new System.EventHandler(this.botonVolver_Click);
             // 
+            // permisoMessage
+            // 
+            this.permisoMessage.AutoSize = true;
+            this.permisoMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.permisoMessage.Location = new System.Drawing.Point(81, 124);
+            this.permisoMessage.Name = "permisoMessage";
+            this.permisoMessage.Size = new System.Drawing.Size(272, 17);
+            this.permisoMessage.TabIndex = 58;
+            this.permisoMessage.Text = "Usted no tiene ningún permiso disponible!";
+            // 
             // Dummy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(430, 249);
+            this.Controls.Add(this.permisoMessage);
             this.Controls.Add(this.botonVolver);
             this.Controls.Add(this.listaMenu);
             this.Controls.Add(this.label1);
@@ -117,5 +129,6 @@
         private System.Windows.Forms.ComboBox InputAplicativos;
         private System.Windows.Forms.ListBox listaMenu;
         private System.Windows.Forms.Button botonVolver;
+        private System.Windows.Forms.Label permisoMessage;
     }
 }

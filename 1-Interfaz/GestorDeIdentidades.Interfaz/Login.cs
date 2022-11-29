@@ -18,7 +18,6 @@ namespace GestorDeIdentidades.Interfaz
         public Login()
         {
             InitializeComponent();
-            InputContrasena.PasswordChar = ' ';
         }
 
         private void BotonLogin_Click(object sender, EventArgs e)
@@ -76,6 +75,11 @@ namespace GestorDeIdentidades.Interfaz
             this.Hide();
             var myForm = new Registro();
             myForm.Show();
+        }
+
+        private void botonSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

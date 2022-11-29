@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dapper;
+using System.Runtime.Remoting.Messaging;
 
 namespace GestorDeIdentidades.DataAccess
 {
@@ -39,7 +40,9 @@ namespace GestorDeIdentidades.DataAccess
                 var parameters = new DynamicParameters();
                 parameters.Add("@UserId", userId, DbType.Int32);
 
-                return connection.Query<Permiso>(query, parameters, commandType: CommandType.Text).First();
+                var res = connection.Query<Permiso>(query, parameters, commandType: CommandType.Text).FirstOrDefault();
+
+                return res;
             }
         }
 

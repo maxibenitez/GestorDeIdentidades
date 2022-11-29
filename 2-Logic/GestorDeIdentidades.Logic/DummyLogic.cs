@@ -22,19 +22,6 @@ namespace GestorDeIdentidades.Logic
             return permisos;
         }
 
-        //public List<Aplicativo> GetMenuAutorizado()
-        //{
-        //    using (SqlConnection connection = new SqlConnection(ConnectionString))
-        //    {
-        //        connection.Open();
-
-        //        const string query = "@SELECT nombreapp from vwAppDummy";
-
-
-        //        return connection.Query<Aplicativo>(query, CommandType.Text).ToList();
-        //    }
-        //}
-
         public List<Aplicativo> GetAplicativosDummy(int user_id)
         {
             return _aplicativosService.GetAplicativosDummy(user_id);

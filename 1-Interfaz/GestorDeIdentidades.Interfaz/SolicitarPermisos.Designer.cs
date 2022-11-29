@@ -40,23 +40,23 @@
             // InputRol
             // 
             this.InputRol.FormattingEnabled = true;
-            this.InputRol.Location = new System.Drawing.Point(152, 104);
+            this.InputRol.Location = new System.Drawing.Point(127, 105);
             this.InputRol.Name = "InputRol";
-            this.InputRol.Size = new System.Drawing.Size(223, 21);
+            this.InputRol.Size = new System.Drawing.Size(221, 21);
             this.InputRol.TabIndex = 19;
             // 
             // InputAplicativo
             // 
             this.InputAplicativo.FormattingEnabled = true;
-            this.InputAplicativo.Location = new System.Drawing.Point(152, 70);
+            this.InputAplicativo.Location = new System.Drawing.Point(127, 70);
             this.InputAplicativo.Name = "InputAplicativo";
-            this.InputAplicativo.Size = new System.Drawing.Size(223, 21);
+            this.InputAplicativo.Size = new System.Drawing.Size(221, 21);
             this.InputAplicativo.TabIndex = 18;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(64, 107);
+            this.label10.Location = new System.Drawing.Point(39, 108);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(82, 13);
             this.label10.TabIndex = 17;
@@ -65,7 +65,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(90, 73);
+            this.label9.Location = new System.Drawing.Point(65, 73);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(56, 13);
             this.label9.TabIndex = 16;
@@ -73,9 +73,9 @@
             // 
             // botonSolicitar
             // 
-            this.botonSolicitar.Location = new System.Drawing.Point(152, 140);
+            this.botonSolicitar.Location = new System.Drawing.Point(127, 151);
             this.botonSolicitar.Name = "botonSolicitar";
-            this.botonSolicitar.Size = new System.Drawing.Size(179, 23);
+            this.botonSolicitar.Size = new System.Drawing.Size(221, 23);
             this.botonSolicitar.TabIndex = 20;
             this.botonSolicitar.Text = "Solicitar";
             this.botonSolicitar.UseVisualStyleBackColor = true;
@@ -85,7 +85,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(162, 28);
+            this.label5.Location = new System.Drawing.Point(160, 27);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(157, 22);
             this.label5.TabIndex = 21;
@@ -93,9 +93,9 @@
             // 
             // botonVolver
             // 
-            this.botonVolver.Location = new System.Drawing.Point(152, 171);
+            this.botonVolver.Location = new System.Drawing.Point(127, 186);
             this.botonVolver.Name = "botonVolver";
-            this.botonVolver.Size = new System.Drawing.Size(179, 23);
+            this.botonVolver.Size = new System.Drawing.Size(221, 23);
             this.botonVolver.TabIndex = 20;
             this.botonVolver.Text = "Volver";
             this.botonVolver.UseVisualStyleBackColor = true;
@@ -105,7 +105,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(472, 206);
+            this.ClientSize = new System.Drawing.Size(467, 228);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.botonVolver);
             this.Controls.Add(this.botonSolicitar);

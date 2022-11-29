@@ -102,7 +102,7 @@
             // 
             // actualizarAplicativos
             // 
-            this.actualizarAplicativos.Location = new System.Drawing.Point(117, 252);
+            this.actualizarAplicativos.Location = new System.Drawing.Point(117, 257);
             this.actualizarAplicativos.Name = "actualizarAplicativos";
             this.actualizarAplicativos.Size = new System.Drawing.Size(221, 23);
             this.actualizarAplicativos.TabIndex = 52;
@@ -112,7 +112,7 @@
             // 
             // botonVolver
             // 
-            this.botonVolver.Location = new System.Drawing.Point(117, 281);
+            this.botonVolver.Location = new System.Drawing.Point(117, 294);
             this.botonVolver.Name = "botonVolver";
             this.botonVolver.Size = new System.Drawing.Size(221, 23);
             this.botonVolver.TabIndex = 52;
@@ -124,7 +124,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 313);
+            this.ClientSize = new System.Drawing.Size(430, 334);
             this.Controls.Add(this.botonVolver);
             this.Controls.Add(this.actualizarAplicativos);
             this.Controls.Add(this.label1);

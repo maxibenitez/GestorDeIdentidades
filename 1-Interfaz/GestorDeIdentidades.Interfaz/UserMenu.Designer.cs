@@ -37,7 +37,7 @@
             // 
             // botonPermisos
             // 
-            this.botonPermisos.Location = new System.Drawing.Point(124, 111);
+            this.botonPermisos.Location = new System.Drawing.Point(115, 106);
             this.botonPermisos.Name = "botonPermisos";
             this.botonPermisos.Size = new System.Drawing.Size(221, 23);
             this.botonPermisos.TabIndex = 14;
@@ -47,7 +47,7 @@
             // 
             // botonAplicativos
             // 
-            this.botonAplicativos.Location = new System.Drawing.Point(124, 75);
+            this.botonAplicativos.Location = new System.Drawing.Point(115, 69);
             this.botonAplicativos.Name = "botonAplicativos";
             this.botonAplicativos.Size = new System.Drawing.Size(221, 23);
             this.botonAplicativos.TabIndex = 13;
@@ -59,7 +59,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(159, 33);
+            this.label5.Location = new System.Drawing.Point(150, 27);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(145, 22);
             this.label5.TabIndex = 12;
@@ -67,7 +67,7 @@
             // 
             // botonCambiarContra
             // 
-            this.botonCambiarContra.Location = new System.Drawing.Point(124, 150);
+            this.botonCambiarContra.Location = new System.Drawing.Point(115, 142);
             this.botonCambiarContra.Name = "botonCambiarContra";
             this.botonCambiarContra.Size = new System.Drawing.Size(221, 23);
             this.botonCambiarContra.TabIndex = 14;
@@ -82,7 +82,7 @@
             this.botonSalir.FlatAppearance.BorderSize = 0;
             this.botonSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botonSalir.ForeColor = System.Drawing.Color.Black;
-            this.botonSalir.Location = new System.Drawing.Point(440, 2);
+            this.botonSalir.Location = new System.Drawing.Point(414, 2);
             this.botonSalir.Name = "botonSalir";
             this.botonSalir.Size = new System.Drawing.Size(47, 23);
             this.botonSalir.TabIndex = 15;
@@ -94,7 +94,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(490, 210);
+            this.ClientSize = new System.Drawing.Size(463, 186);
             this.Controls.Add(this.botonSalir);
             this.Controls.Add(this.botonCambiarContra);
             this.Controls.Add(this.botonPermisos);

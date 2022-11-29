@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GestorDeIdentidades.Interfaz
 {
@@ -47,20 +48,16 @@ namespace GestorDeIdentidades.Interfaz
             if(_permisosLogic.SolicitarPermiso(this.user_id, appId, rolId))
             {
                 this.Hide();
-                var myForm = new Login();
-                myForm.Show();
-            }
-            else
-            {
-
+                var menu = new UserMenu(this.user_id);
+                menu.Show();
             }
         }
 
         private void botonVolver_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var myForm = new UserMenu(this.user_id);
-            myForm.Show();
+            var menu = new UserMenu(this.user_id);
+            menu.Show();
         }
     }
 }

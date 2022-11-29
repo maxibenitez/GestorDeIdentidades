@@ -89,9 +89,6 @@ namespace GestorDeIdentidades.DataAccess
                 parameters.Add("@nuevaContHashed", nuevaContHashed, DbType.String);
                 parameters.Add("@user_id", user_id, DbType.Int32);
 
-                connection.Query(query, parameters, commandType: CommandType.Text);
-                return true;
-                /*
                 var resp = connection.Execute(query, parameters, commandType: CommandType.Text);
 
                 if(resp != 0)
@@ -102,7 +99,6 @@ namespace GestorDeIdentidades.DataAccess
                 {
                     return false;
                 }
-                */
             }
         }
 

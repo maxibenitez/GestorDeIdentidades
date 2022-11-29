@@ -20,6 +20,8 @@ namespace GestorDeIdentidades.Interfaz
         {
             InitializeComponent();
 
+            errorCampos.Text = "";
+
             List<Preguntas> preguntas = _registroLogic.GetPreguntas();
 
             foreach (Preguntas pregunta in preguntas)
@@ -35,19 +37,30 @@ namespace GestorDeIdentidades.Interfaz
 
         private void Registrarse()
         {
+            errorCampos.Text = "";
+
             string nombre = InputNombre.Text;
             string apellido = InputApellido.Text;
             string direccion = InputDireccion.Text;
             string ciudad = InputCiudad.Text;
             string departamento = InputDepartamento.Text;
             string[] pregunta = InputPregunta.Text.Split(new char[] { '.' });
-            int pregId = Int32.Parse(pregunta[0]);
+            int pregId;
+            if (pregunta[0].Equals(""))
+            {
+                errorCampos.Text = "Debe completar todos los campos!";
+                pregId = 0;
+            }
+            else
+            {
+                pregId = Convert.ToInt32(pregunta[0]);
+            }
             string respuesta = InputRespuesta.Text;
             string contrasena = InputContrasena.Text;
 
-            if ( contrasena == "" || nombre == "" || apellido == "" || direccion == "" || ciudad == "" || departamento == "" || respuesta == "")
+            if ( contrasena == "" || nombre == "" || apellido == "" || direccion == "" || ciudad == "" || departamento == "" || respuesta == "" || pregId == 0 )
             {
-                errorMessage.Text = "Ha ocurrido un problema!";
+                errorCampos.Text = "Debe completar todos los campos!";
             }
             else
             {
@@ -77,6 +90,13 @@ namespace GestorDeIdentidades.Interfaz
                 }
                 
             }
+        }
+
+        private void botonVolver_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var login = new Login();
+            login.Show();
         }
     }
 }

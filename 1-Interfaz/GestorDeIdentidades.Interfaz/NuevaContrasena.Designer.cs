@@ -32,7 +32,8 @@
             this.buttonCambiar = new System.Windows.Forms.Button();
             this.contraInput = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.errorMessage = new System.Windows.Forms.Label();
+            this.errorContra = new System.Windows.Forms.Label();
+            this.errorCampos = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label5
@@ -47,7 +48,7 @@
             // 
             // buttonCambiar
             // 
-            this.buttonCambiar.Location = new System.Drawing.Point(127, 110);
+            this.buttonCambiar.Location = new System.Drawing.Point(127, 120);
             this.buttonCambiar.Name = "buttonCambiar";
             this.buttonCambiar.Size = new System.Drawing.Size(221, 23);
             this.buttonCambiar.TabIndex = 9;
@@ -71,21 +72,33 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Nueva contraseña:";
             // 
-            // errorMessage
+            // errorContra
             // 
-            this.errorMessage.AutoSize = true;
-            this.errorMessage.ForeColor = System.Drawing.Color.Red;
-            this.errorMessage.Location = new System.Drawing.Point(124, 147);
-            this.errorMessage.Name = "errorMessage";
-            this.errorMessage.Size = new System.Drawing.Size(0, 13);
-            this.errorMessage.TabIndex = 10;
+            this.errorContra.AutoSize = true;
+            this.errorContra.ForeColor = System.Drawing.Color.Red;
+            this.errorContra.Location = new System.Drawing.Point(123, 96);
+            this.errorContra.Name = "errorContra";
+            this.errorContra.Size = new System.Drawing.Size(14, 13);
+            this.errorContra.TabIndex = 10;
+            this.errorContra.Text = "P";
+            // 
+            // errorCampos
+            // 
+            this.errorCampos.AutoSize = true;
+            this.errorCampos.ForeColor = System.Drawing.Color.Red;
+            this.errorCampos.Location = new System.Drawing.Point(159, 96);
+            this.errorCampos.Name = "errorCampos";
+            this.errorCampos.Size = new System.Drawing.Size(14, 13);
+            this.errorCampos.TabIndex = 57;
+            this.errorCampos.Text = "C";
             // 
             // NuevaContrasena
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(465, 178);
-            this.Controls.Add(this.errorMessage);
+            this.ClientSize = new System.Drawing.Size(465, 157);
+            this.Controls.Add(this.errorCampos);
+            this.Controls.Add(this.errorContra);
             this.Controls.Add(this.buttonCambiar);
             this.Controls.Add(this.contraInput);
             this.Controls.Add(this.label4);
@@ -103,6 +116,7 @@
         private System.Windows.Forms.Button buttonCambiar;
         private System.Windows.Forms.TextBox contraInput;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label errorMessage;
+        private System.Windows.Forms.Label errorContra;
+        private System.Windows.Forms.Label errorCampos;
     }
 }

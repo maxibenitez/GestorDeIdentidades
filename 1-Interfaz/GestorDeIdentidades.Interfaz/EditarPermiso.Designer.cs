@@ -64,7 +64,7 @@
             // 
             // actualizarPermiso
             // 
-            this.actualizarPermiso.Location = new System.Drawing.Point(125, 243);
+            this.actualizarPermiso.Location = new System.Drawing.Point(125, 254);
             this.actualizarPermiso.Name = "actualizarPermiso";
             this.actualizarPermiso.Size = new System.Drawing.Size(221, 23);
             this.actualizarPermiso.TabIndex = 32;
@@ -151,22 +151,22 @@
             this.estados.Name = "estados";
             this.estados.Size = new System.Drawing.Size(221, 21);
             this.estados.TabIndex = 45;
-            this.estados.SelectedIndexChanged += new System.EventHandler(this.estados_SelectedIndexChanged);
             // 
             // errorMessage
             // 
             this.errorMessage.AutoSize = true;
             this.errorMessage.ForeColor = System.Drawing.Color.Red;
-            this.errorMessage.Location = new System.Drawing.Point(173, 282);
+            this.errorMessage.Location = new System.Drawing.Point(170, 231);
             this.errorMessage.Name = "errorMessage";
-            this.errorMessage.Size = new System.Drawing.Size(0, 13);
+            this.errorMessage.Size = new System.Drawing.Size(126, 13);
             this.errorMessage.TabIndex = 46;
+            this.errorMessage.Text = "Ha ocurrido un problema!";
             // 
             // EditarPermiso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(467, 312);
+            this.ClientSize = new System.Drawing.Size(467, 294);
             this.Controls.Add(this.errorMessage);
             this.Controls.Add(this.estados);
             this.Controls.Add(this.label12);

@@ -50,6 +50,7 @@ namespace GestorDeIdentidades.Interfaz
             int app_id = Convert.ToInt32(aplicativo[0]);
 
             List<int> rolesAplicativosId = new List<int>();
+
             foreach (var item in InputRolesAplicativos.CheckedItems)
             {
                 string[] items = item.ToString().Split('.');
@@ -59,9 +60,9 @@ namespace GestorDeIdentidades.Interfaz
 
             _gestorLogic.EditarAplicativos(rol_neg_id, app_id, rolesAplicativosId);
 
-            this.Hide();
-            var gestor = new Gestor();
+            var gestor = new GestorPermisos();
             gestor.Show();
+            this.Hide();
         }
 
         private void botonVolver_Click(object sender, EventArgs e)
