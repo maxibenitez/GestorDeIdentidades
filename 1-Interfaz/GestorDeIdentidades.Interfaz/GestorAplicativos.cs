@@ -34,12 +34,6 @@ namespace GestorDeIdentidades.Interfaz
                 InputAplicativos.Items.Add($"{aplicativo.App_id}. {aplicativo.NombreApp}");
             }
 
-            List<RolAplicativo> rolesAplicativos = _gestorLogic.GetRolesAplicativos();
-
-            foreach (RolAplicativo rol in rolesAplicativos)
-            {
-                InputRolesAplicativos.Items.Add($"{rol.Rol_id}. {rol.Descripcion_rol}");
-            }
         }
 
         private void actualizarAplicativos_Click(object sender, EventArgs e)
@@ -70,6 +64,45 @@ namespace GestorDeIdentidades.Interfaz
             this.Hide();
             var gestor = new Gestor();
             gestor.Show();
+        }
+
+        private void InputAplicativos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string[] rol = InputRolesNegocio.Text.Split('.');
+            int rol_neg_id = Convert.ToInt32(rol[0]);
+            string[] aplicativo = InputAplicativos.Text.Split('.');
+            int app_id = Convert.ToInt32(aplicativo[0]);
+
+            InputRolesAplicativos.Items.Clear();
+            List<RolAplicativo> rolesAplicativos = _gestorLogic.GetRolesAplicativos();
+            List<int> rolNegAplicativos = _gestorLogic.GetRolesNegocioAplicativos(rol_neg_id, app_id);
+
+
+            foreach (RolAplicativo rolA in rolesAplicativos)
+            {
+                if (rolNegAplicativos.Contains(rolA.Rol_id))
+                {
+                    InputRolesAplicativos.Items.Add($"{rolA.Rol_id}. {rolA.Descripcion_rol}", true);
+                }
+                else
+                {
+                    InputRolesAplicativos.Items.Add($"{rolA.Rol_id}. {rolA.Descripcion_rol}", false);
+                }
+                /*
+                foreach (var rolB in rolNegAplicativos)
+                {
+                    if(rolB.Rol_id == rolA.Rol_id)
+                    {
+                        InputRolesAplicativos.Items.Add($"{rolA.Rol_id}. {rolA.Descripcion_rol}", true);
+                    }
+                    else
+                    {
+                        InputRolesAplicativos.Items.Add($"{rolA.Rol_id}. {rolA.Descripcion_rol}", false);
+                    }
+                }
+                */
+
+            }
         }
     }
 }

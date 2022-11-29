@@ -72,6 +72,7 @@
             this.InputAplicativos.Name = "InputAplicativos";
             this.InputAplicativos.Size = new System.Drawing.Size(221, 21);
             this.InputAplicativos.TabIndex = 48;
+            this.InputAplicativos.SelectedIndexChanged += new System.EventHandler(this.InputAplicativos_SelectedIndexChanged);
             // 
             // label11
             // 
