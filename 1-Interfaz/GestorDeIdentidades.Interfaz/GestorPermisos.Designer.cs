@@ -122,7 +122,7 @@
             this.Controls.Add(this.bTodos);
             this.Controls.Add(this.tablaPermisos);
             this.Name = "GestorPermisos";
-            this.Text = "Form2";
+            this.Text = "Gestor de Permisos";
             ((System.ComponentModel.ISupportInitialize)(this.tablaPermisos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

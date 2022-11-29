@@ -181,7 +181,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label7);
             this.Name = "EditarPermiso";
-            this.Text = "EditarPermiso";
+            this.Text = "Editar Permiso";
             this.ResumeLayout(false);
             this.PerformLayout();
 

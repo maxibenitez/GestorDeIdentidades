@@ -257,7 +257,7 @@
             this.Controls.Add(this.InputNombre);
             this.Controls.Add(this.InputContrasena);
             this.Name = "Registro";
-            this.Text = "Registro";
+            this.Text = "Registro de Usuario";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -104,7 +104,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Name = "NuevaContrasena";
-            this.Text = "NuevaContrasena";
+            this.Text = "Nueva Contraseña";
             this.ResumeLayout(false);
             this.PerformLayout();
 

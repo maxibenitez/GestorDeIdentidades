@@ -47,7 +47,7 @@
             this.buttonConfirmar.Location = new System.Drawing.Point(126, 182);
             this.buttonConfirmar.Name = "buttonConfirmar";
             this.buttonConfirmar.Size = new System.Drawing.Size(221, 23);
-            this.buttonConfirmar.TabIndex = 0;
+            this.buttonConfirmar.TabIndex = 3;
             this.buttonConfirmar.Text = "Confirmar";
             this.buttonConfirmar.UseVisualStyleBackColor = true;
             this.buttonConfirmar.Click += new System.EventHandler(this.buttonConfirmar_Click);
@@ -74,7 +74,7 @@
             this.respuestaInput.Location = new System.Drawing.Point(126, 128);
             this.respuestaInput.Name = "respuestaInput";
             this.respuestaInput.Size = new System.Drawing.Size(221, 20);
-            this.respuestaInput.TabIndex = 3;
+            this.respuestaInput.TabIndex = 2;
             // 
             // label2
             // 
@@ -120,14 +120,14 @@
             this.usuarioInput.Location = new System.Drawing.Point(126, 58);
             this.usuarioInput.Name = "usuarioInput";
             this.usuarioInput.Size = new System.Drawing.Size(221, 20);
-            this.usuarioInput.TabIndex = 8;
+            this.usuarioInput.TabIndex = 0;
             // 
             // botonVolver
             // 
             this.botonVolver.Location = new System.Drawing.Point(126, 218);
             this.botonVolver.Name = "botonVolver";
             this.botonVolver.Size = new System.Drawing.Size(221, 23);
-            this.botonVolver.TabIndex = 54;
+            this.botonVolver.TabIndex = 4;
             this.botonVolver.Text = "Volver";
             this.botonVolver.UseVisualStyleBackColor = true;
             this.botonVolver.Click += new System.EventHandler(this.botonVolver_Click);

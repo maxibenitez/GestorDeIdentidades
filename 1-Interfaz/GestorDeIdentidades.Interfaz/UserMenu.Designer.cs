@@ -63,7 +63,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(145, 22);
             this.label5.TabIndex = 12;
-            this.label5.Text = "Menu de usuario";
+            this.label5.Text = "Menú de usuario";
             // 
             // botonCambiarContra
             // 
@@ -101,7 +101,7 @@
             this.Controls.Add(this.botonAplicativos);
             this.Controls.Add(this.label5);
             this.Name = "UserMenu";
-            this.Text = "UserMenu";
+            this.Text = "Manú de Usuario";
             this.ResumeLayout(false);
             this.PerformLayout();
 

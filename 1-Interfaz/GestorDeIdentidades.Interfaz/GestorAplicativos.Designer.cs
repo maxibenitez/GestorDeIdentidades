@@ -136,7 +136,7 @@
             this.Controls.Add(this.InputRolesAplicativos);
             this.Controls.Add(this.label7);
             this.Name = "GestorAplicativos";
-            this.Text = "GestorAplicativos";
+            this.Text = "Gestor de Aplicativos";
             this.ResumeLayout(false);
             this.PerformLayout();
 

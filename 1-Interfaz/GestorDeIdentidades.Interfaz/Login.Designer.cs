@@ -155,7 +155,7 @@
             this.Controls.Add(this.InputContrasena);
             this.Controls.Add(this.InputUsuario);
             this.Name = "Login";
-            this.Text = "Login";
+            this.Text = "Inicio de Sesión";
             this.ResumeLayout(false);
             this.PerformLayout();
 

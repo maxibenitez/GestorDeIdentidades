@@ -22,6 +22,7 @@ namespace GestorDeIdentidades.Interfaz
         {
             InitializeComponent();
             this.user_id= user_id;
+            errorCampos.Text = "";
 
             List<Aplicativo> aplicativos = _registroLogic.GetAplicativos();
 
@@ -40,16 +41,26 @@ namespace GestorDeIdentidades.Interfaz
 
         private void botonSolicitar_Click(object sender, EventArgs e)
         {
-            string[] aplicativo = InputAplicativo.Text.Split('.');
-            int appId = Int32.Parse(aplicativo[0]);
+            string[] aplicativo = InputAplicativo.Text.Split('.'); 
             string[] rol = InputRol.Text.Split('.');
-            int rolId = Int32.Parse(rol[0]);
+            
+            errorCampos.Text = "";
 
-            if(_permisosLogic.SolicitarPermiso(this.user_id, appId, rolId))
+            if (aplicativo[0].Equals("") || rol[0].Equals(""))
             {
-                this.Hide();
-                var menu = new UserMenu(this.user_id);
-                menu.Show();
+                errorCampos.Text = "Debe completar todos los campos!";
+            }
+            else
+            {
+                int appId = Int32.Parse(aplicativo[0]);
+                int rolId = Int32.Parse(rol[0]);
+
+                if (_permisosLogic.SolicitarPermiso(this.user_id, appId, rolId))
+                {
+                    this.Hide();
+                    var menu = new UserMenu(this.user_id);
+                    menu.Show();
+                }
             }
         }
 

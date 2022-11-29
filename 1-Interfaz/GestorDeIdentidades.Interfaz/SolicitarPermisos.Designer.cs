@@ -35,6 +35,7 @@
             this.botonSolicitar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.botonVolver = new System.Windows.Forms.Button();
+            this.errorCampos = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // InputRol
@@ -73,7 +74,7 @@
             // 
             // botonSolicitar
             // 
-            this.botonSolicitar.Location = new System.Drawing.Point(127, 151);
+            this.botonSolicitar.Location = new System.Drawing.Point(127, 158);
             this.botonSolicitar.Name = "botonSolicitar";
             this.botonSolicitar.Size = new System.Drawing.Size(221, 23);
             this.botonSolicitar.TabIndex = 20;
@@ -89,11 +90,11 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(157, 22);
             this.label5.TabIndex = 21;
-            this.label5.Text = "Solicitar permisos";
+            this.label5.Text = "Solicitar Permisos";
             // 
             // botonVolver
             // 
-            this.botonVolver.Location = new System.Drawing.Point(127, 186);
+            this.botonVolver.Location = new System.Drawing.Point(127, 193);
             this.botonVolver.Name = "botonVolver";
             this.botonVolver.Size = new System.Drawing.Size(221, 23);
             this.botonVolver.TabIndex = 20;
@@ -101,11 +102,22 @@
             this.botonVolver.UseVisualStyleBackColor = true;
             this.botonVolver.Click += new System.EventHandler(this.botonVolver_Click);
             // 
+            // errorCampos
+            // 
+            this.errorCampos.AutoSize = true;
+            this.errorCampos.ForeColor = System.Drawing.Color.Red;
+            this.errorCampos.Location = new System.Drawing.Point(156, 135);
+            this.errorCampos.Name = "errorCampos";
+            this.errorCampos.Size = new System.Drawing.Size(170, 13);
+            this.errorCampos.TabIndex = 57;
+            this.errorCampos.Text = "Debe completar todos los campos!";
+            // 
             // SolicitarPermisos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(467, 228);
+            this.ClientSize = new System.Drawing.Size(467, 238);
+            this.Controls.Add(this.errorCampos);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.botonVolver);
             this.Controls.Add(this.botonSolicitar);
@@ -114,7 +126,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Name = "SolicitarPermisos";
-            this.Text = "SolicitarPermisos";
+            this.Text = "Solicitar Permisos";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,5 +141,6 @@
         private System.Windows.Forms.Button botonSolicitar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button botonVolver;
+        private System.Windows.Forms.Label errorCampos;
     }
 }
