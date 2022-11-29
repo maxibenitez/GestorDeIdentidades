@@ -39,6 +39,23 @@ namespace GestorDeIdentidades.DataAccess
             }
         }
 
+        public List<int> GetRolesNegocioAplicativos(int rol_neg_id, int app_id)
+        {
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                connection.Open();
+
+                const string query = @"SELECT rol_id FROM Roles_Negocio_Aplicativos
+                                        WHERE rol_neg_id = @Rol_neg_id AND app_id = @App_id";
+
+                var parameters = new DynamicParameters();
+                parameters.Add("@Rol_neg_id", rol_neg_id, DbType.Int32);
+                parameters.Add("@App_id", app_id, DbType.Int32);
+
+                return connection.Query<int>(query, parameters, commandType: CommandType.Text).ToList();
+            }
+        }
+
         public bool AgregarRolesNegocioAplicativos(int rol_neg_id, int app_id, int rol_id)
         {
             using (SqlConnection connection = new SqlConnection(ConnectionString))

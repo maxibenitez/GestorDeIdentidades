@@ -56,6 +56,11 @@ namespace GestorDeIdentidades.Logic
             return result;
         }
 
+        public List<int> GetRolesNegocioAplicativos(int rol_neg_id, int app_id)
+        {
+            return _aplicativosService.GetRolesNegocioAplicativos(rol_neg_id, app_id);
+        }
+
         public void EditarAplicativos(int rol_neg_id, int app_id, List<int> rolesId)
         {
             _aplicativosService.BorrarRolesNegocioAplicativos(rol_neg_id, app_id);
