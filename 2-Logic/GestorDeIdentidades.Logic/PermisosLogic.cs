@@ -32,9 +32,25 @@ namespace GestorDeIdentidades.Logic
             return _permisosService.GetPermisosPendientes();
         }
 
-        public bool EditarPermiso(int userId, string estado)
+        public bool SolicitarPermiso(int user_id, int app_id, int rol_neg_id)
         {
-            return _permisosService.EditarPermiso(userId, estado);
+            var nuevoPermiso = new Permiso()
+            {
+                User_id = user_id,
+                App_id = app_id,
+                Rol_neg_id = rol_neg_id,
+                Fecha_solicitud = DateTime.Now,
+                Fecha_autorizacion = null,
+                Estado = "Pendiente"
+            };
+
+            bool respuesta = _permisosService.AddPersonaPermiso(nuevoPermiso);
+            return respuesta;
+        }
+
+        public bool EditarPermiso(int userId, int app_id, string estado)
+        {
+            return _permisosService.EditarPermiso(userId, app_id, estado);
         }
     }
 }

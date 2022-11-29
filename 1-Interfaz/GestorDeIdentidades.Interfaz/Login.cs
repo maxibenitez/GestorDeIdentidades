@@ -48,8 +48,8 @@ namespace GestorDeIdentidades.Interfaz
                     else
                     {
                         this.Hide();
-                        var dummy = new Dummy(user_id);
-                        dummy.Show();        
+                        var usermenu = new UserMenu(user_id);
+                        usermenu.Show();        
                     }
                 }
                 else
@@ -75,6 +75,11 @@ namespace GestorDeIdentidades.Interfaz
             this.Hide();
             var myForm = new Registro();
             myForm.Show();
+        }
+
+        private void botonSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

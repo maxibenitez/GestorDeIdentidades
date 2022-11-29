@@ -27,6 +27,9 @@ C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interf
 C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.GestorPermisos.resources
 C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.NuevaContrasena.resources
 C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.RecuperarContrasena.resources
+C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.Dummy.resources
+C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.UserMenu.resources
+C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.SolicitarPermisos.resources
 C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\bin\Debug\GestorDeIdentidades.Interfaz.exe.config
 C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\bin\Debug\GestorDeIdentidades.Interfaz.exe
 C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\bin\Debug\GestorDeIdentidades.Interfaz.pdb
@@ -42,6 +45,7 @@ C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatori
 C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\bin\Debug\Dapper.xml
 C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.csproj.AssemblyReference.cache
 C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.csproj.SuggestedBindingRedirects.cache
+C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.Dummy.resources
 C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.EditarPermiso.resources
 C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.Gestor.resources
 C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.GestorAplicativos.resources
@@ -51,9 +55,10 @@ C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatori
 C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.Properties.Resources.resources
 C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.RecuperarContrasena.resources
 C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.Registro.resources
+C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.SolicitarPermisos.resources
+C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.UserMenu.resources
 C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.csproj.GenerateResource.cache
 C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.csproj.CoreCompileInputs.cache
 C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.csproj.CopyComplete
 C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.exe
 C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.pdb
-C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.Dummy.resources

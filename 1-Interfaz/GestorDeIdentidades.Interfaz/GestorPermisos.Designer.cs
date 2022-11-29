@@ -34,6 +34,7 @@
             this.bDenegados = new System.Windows.Forms.Button();
             this.bPendientes = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.botonVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPermisos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,11 +99,22 @@
             this.label7.TabIndex = 18;
             this.label7.Text = "Gestor de Permisos";
             // 
+            // botonVolver
+            // 
+            this.botonVolver.Location = new System.Drawing.Point(376, 366);
+            this.botonVolver.Name = "botonVolver";
+            this.botonVolver.Size = new System.Drawing.Size(199, 23);
+            this.botonVolver.TabIndex = 19;
+            this.botonVolver.Text = "Volver";
+            this.botonVolver.UseVisualStyleBackColor = true;
+            this.botonVolver.Click += new System.EventHandler(this.botonVolver_Click);
+            // 
             // GestorPermisos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(991, 376);
+            this.ClientSize = new System.Drawing.Size(991, 401);
+            this.Controls.Add(this.botonVolver);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.bPendientes);
             this.Controls.Add(this.bDenegados);
@@ -124,5 +136,6 @@
         private System.Windows.Forms.Button bDenegados;
         private System.Windows.Forms.Button bPendientes;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button botonVolver;
     }
 }

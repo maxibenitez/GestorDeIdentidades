@@ -81,6 +81,7 @@ namespace GestorDeIdentidades.DataAccess
                 return connection.Query<Aplicativo>(query, parameters, commandType: CommandType.Text).ToList();
             }
         }
+
         public List<Menus> GetMenuDummy(int user_id, int app_id)
         {
             using (SqlConnection connection = new SqlConnection(ConnectionString))
@@ -97,7 +98,6 @@ namespace GestorDeIdentidades.DataAccess
                 return connection.Query<Menus>(query, parameters, commandType: CommandType.Text).ToList();
             }
         }
-
 
         public bool BorrarRolesNegocioAplicativos(int rol_neg_id, int app_id)
         {
@@ -124,17 +124,5 @@ namespace GestorDeIdentidades.DataAccess
                 }
             }
         }
-
-        //public List<Aplicativo> GetMenuAutorizado()
-        //{
-        //    using (SqlConnection connection = new SqlConnection(ConnectionString))
-        //    {
-        //        connection.Open();
-
-        //        const string query = "@SELECT nombreapp FROM vwAppDummy";
-
-        //        return connection.Query<Aplicativo>(query, CommandType.Text).ToList();
-        //    }
-        //}
     }
 }

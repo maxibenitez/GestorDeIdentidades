@@ -47,10 +47,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.InputAplicativo = new System.Windows.Forms.ComboBox();
-            this.InputRol = new System.Windows.Forms.ComboBox();
+            this.botonVolver = new System.Windows.Forms.Button();
+            this.errorCampos = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // InputContrasena
@@ -58,14 +56,14 @@
             this.InputContrasena.Location = new System.Drawing.Point(120, 318);
             this.InputContrasena.Name = "InputContrasena";
             this.InputContrasena.Size = new System.Drawing.Size(223, 20);
-            this.InputContrasena.TabIndex = 1;
+            this.InputContrasena.TabIndex = 7;
             // 
             // InputNombre
             // 
             this.InputNombre.Location = new System.Drawing.Point(120, 65);
             this.InputNombre.Name = "InputNombre";
             this.InputNombre.Size = new System.Drawing.Size(223, 20);
-            this.InputNombre.TabIndex = 1;
+            this.InputNombre.TabIndex = 0;
             // 
             // InputApellido
             // 
@@ -73,14 +71,13 @@
             this.InputApellido.Name = "InputApellido";
             this.InputApellido.Size = new System.Drawing.Size(223, 20);
             this.InputApellido.TabIndex = 1;
-            //this.InputApellido.TextChanged += new System.EventHandler(this.InputApellido_TextChanged);
             // 
             // InputDireccion
             // 
             this.InputDireccion.Location = new System.Drawing.Point(120, 136);
             this.InputDireccion.Name = "InputDireccion";
             this.InputDireccion.Size = new System.Drawing.Size(223, 20);
-            this.InputDireccion.TabIndex = 1;
+            this.InputDireccion.TabIndex = 2;
             // 
             // label3
             // 
@@ -99,7 +96,6 @@
             this.label4.Size = new System.Drawing.Size(55, 13);
             this.label4.TabIndex = 2;
             this.label4.Text = "Apellidos: ";
-            //this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -124,7 +120,7 @@
             this.InputCiudad.Location = new System.Drawing.Point(120, 172);
             this.InputCiudad.Name = "InputCiudad";
             this.InputCiudad.Size = new System.Drawing.Size(223, 20);
-            this.InputCiudad.TabIndex = 1;
+            this.InputCiudad.TabIndex = 3;
             // 
             // label7
             // 
@@ -140,7 +136,7 @@
             this.InputDepartamento.Location = new System.Drawing.Point(120, 208);
             this.InputDepartamento.Name = "InputDepartamento";
             this.InputDepartamento.Size = new System.Drawing.Size(223, 20);
-            this.InputDepartamento.TabIndex = 1;
+            this.InputDepartamento.TabIndex = 4;
             // 
             // label8
             // 
@@ -153,10 +149,10 @@
             // 
             // BotonRegistrarse
             // 
-            this.BotonRegistrarse.Location = new System.Drawing.Point(120, 432);
+            this.BotonRegistrarse.Location = new System.Drawing.Point(120, 373);
             this.BotonRegistrarse.Name = "BotonRegistrarse";
             this.BotonRegistrarse.Size = new System.Drawing.Size(223, 23);
-            this.BotonRegistrarse.TabIndex = 3;
+            this.BotonRegistrarse.TabIndex = 8;
             this.BotonRegistrarse.Text = "Registrarse";
             this.BotonRegistrarse.UseVisualStyleBackColor = true;
             this.BotonRegistrarse.Click += new System.EventHandler(this.BotonRegistrarse_Click);
@@ -167,14 +163,14 @@
             this.InputPregunta.Location = new System.Drawing.Point(120, 244);
             this.InputPregunta.Name = "InputPregunta";
             this.InputPregunta.Size = new System.Drawing.Size(223, 21);
-            this.InputPregunta.TabIndex = 4;
+            this.InputPregunta.TabIndex = 5;
             // 
             // InputRespuesta
             // 
             this.InputRespuesta.Location = new System.Drawing.Point(120, 281);
             this.InputRespuesta.Name = "InputRespuesta";
             this.InputRespuesta.Size = new System.Drawing.Size(223, 20);
-            this.InputRespuesta.TabIndex = 1;
+            this.InputRespuesta.TabIndex = 6;
             // 
             // errorMessage
             // 
@@ -193,7 +189,6 @@
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "Respuesta:";
-            //this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label11
             // 
@@ -201,10 +196,9 @@
             this.label11.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(124, 22);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(211, 22);
+            this.label11.Size = new System.Drawing.Size(213, 22);
             this.label11.TabIndex = 8;
-            this.label11.Text = "Registrarse en el sistema";
-            //this.label11.Click += new System.EventHandler(this.label11_Click);
+            this.label11.Text = "Registrarse en el Sistema";
             // 
             // label1
             // 
@@ -216,49 +210,33 @@
             this.label1.Text = "Pregunta\r\nde seguridad:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label9
+            // botonVolver
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(58, 356);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 13);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "Aplicativo:";
+            this.botonVolver.Location = new System.Drawing.Point(120, 409);
+            this.botonVolver.Name = "botonVolver";
+            this.botonVolver.Size = new System.Drawing.Size(223, 23);
+            this.botonVolver.TabIndex = 53;
+            this.botonVolver.Text = "Volver";
+            this.botonVolver.UseVisualStyleBackColor = true;
+            this.botonVolver.Click += new System.EventHandler(this.botonVolver_Click);
             // 
-            // label10
+            // errorCampos
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(32, 390);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(82, 13);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "Rol de negocio:";
-            // 
-            // InputAplicativo
-            // 
-            this.InputAplicativo.FormattingEnabled = true;
-            this.InputAplicativo.Location = new System.Drawing.Point(120, 353);
-            this.InputAplicativo.Name = "InputAplicativo";
-            this.InputAplicativo.Size = new System.Drawing.Size(223, 21);
-            this.InputAplicativo.TabIndex = 14;
-            // 
-            // InputRol
-            // 
-            this.InputRol.FormattingEnabled = true;
-            this.InputRol.Location = new System.Drawing.Point(120, 387);
-            this.InputRol.Name = "InputRol";
-            this.InputRol.Size = new System.Drawing.Size(223, 21);
-            this.InputRol.TabIndex = 15;
+            this.errorCampos.AutoSize = true;
+            this.errorCampos.ForeColor = System.Drawing.Color.Red;
+            this.errorCampos.Location = new System.Drawing.Point(146, 349);
+            this.errorCampos.Name = "errorCampos";
+            this.errorCampos.Size = new System.Drawing.Size(170, 13);
+            this.errorCampos.TabIndex = 58;
+            this.errorCampos.Text = "Debe completar todos los campos!";
             // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(465, 502);
-            this.Controls.Add(this.InputRol);
-            this.Controls.Add(this.InputAplicativo);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
+            this.ClientSize = new System.Drawing.Size(465, 456);
+            this.Controls.Add(this.errorCampos);
+            this.Controls.Add(this.botonVolver);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label2);
@@ -280,7 +258,6 @@
             this.Controls.Add(this.InputContrasena);
             this.Name = "Registro";
             this.Text = "Registro";
-            //this.Load += new System.EventHandler(this.Registro_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,9 +283,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox InputAplicativo;
-        private System.Windows.Forms.ComboBox InputRol;
+        private System.Windows.Forms.Button botonVolver;
+        private System.Windows.Forms.Label errorCampos;
     }
 }

@@ -35,13 +35,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.errorMessage = new System.Windows.Forms.Label();
+            this.errorUsuario = new System.Windows.Forms.Label();
             this.usuarioInput = new System.Windows.Forms.TextBox();
+            this.botonVolver = new System.Windows.Forms.Button();
+            this.errorRespuesta = new System.Windows.Forms.Label();
+            this.errorCampos = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonConfirmar
             // 
-            this.buttonConfirmar.Location = new System.Drawing.Point(126, 172);
+            this.buttonConfirmar.Location = new System.Drawing.Point(126, 182);
             this.buttonConfirmar.Name = "buttonConfirmar";
             this.buttonConfirmar.Size = new System.Drawing.Size(221, 23);
             this.buttonConfirmar.TabIndex = 0;
@@ -56,7 +59,6 @@
             this.InputPregunta.Name = "InputPregunta";
             this.InputPregunta.Size = new System.Drawing.Size(221, 21);
             this.InputPregunta.TabIndex = 1;
-            //this.InputPregunta.SelectedIndexChanged += new System.EventHandler(this.comboPreguntas_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -83,7 +85,6 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Pregunta\r\nde seguridad:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            //this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -104,14 +105,15 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Recuperar Contraseña";
             // 
-            // errorMessage
+            // errorUsuario
             // 
-            this.errorMessage.AutoSize = true;
-            this.errorMessage.ForeColor = System.Drawing.Color.Red;
-            this.errorMessage.Location = new System.Drawing.Point(171, 209);
-            this.errorMessage.Name = "errorMessage";
-            this.errorMessage.Size = new System.Drawing.Size(0, 13);
-            this.errorMessage.TabIndex = 7;
+            this.errorUsuario.AutoSize = true;
+            this.errorUsuario.ForeColor = System.Drawing.Color.Red;
+            this.errorUsuario.Location = new System.Drawing.Point(187, 159);
+            this.errorUsuario.Name = "errorUsuario";
+            this.errorUsuario.Size = new System.Drawing.Size(15, 13);
+            this.errorUsuario.TabIndex = 7;
+            this.errorUsuario.Text = "U";
             // 
             // usuarioInput
             // 
@@ -120,13 +122,46 @@
             this.usuarioInput.Size = new System.Drawing.Size(221, 20);
             this.usuarioInput.TabIndex = 8;
             // 
+            // botonVolver
+            // 
+            this.botonVolver.Location = new System.Drawing.Point(126, 218);
+            this.botonVolver.Name = "botonVolver";
+            this.botonVolver.Size = new System.Drawing.Size(221, 23);
+            this.botonVolver.TabIndex = 54;
+            this.botonVolver.Text = "Volver";
+            this.botonVolver.UseVisualStyleBackColor = true;
+            this.botonVolver.Click += new System.EventHandler(this.botonVolver_Click);
+            // 
+            // errorRespuesta
+            // 
+            this.errorRespuesta.AutoSize = true;
+            this.errorRespuesta.ForeColor = System.Drawing.Color.Red;
+            this.errorRespuesta.Location = new System.Drawing.Point(182, 159);
+            this.errorRespuesta.Name = "errorRespuesta";
+            this.errorRespuesta.Size = new System.Drawing.Size(15, 13);
+            this.errorRespuesta.TabIndex = 55;
+            this.errorRespuesta.Text = "R";
+            // 
+            // errorCampos
+            // 
+            this.errorCampos.AutoSize = true;
+            this.errorCampos.ForeColor = System.Drawing.Color.Red;
+            this.errorCampos.Location = new System.Drawing.Point(152, 159);
+            this.errorCampos.Name = "errorCampos";
+            this.errorCampos.Size = new System.Drawing.Size(14, 13);
+            this.errorCampos.TabIndex = 56;
+            this.errorCampos.Text = "C";
+            // 
             // RecuperarContrasena
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(468, 237);
+            this.ClientSize = new System.Drawing.Size(468, 258);
+            this.Controls.Add(this.errorCampos);
+            this.Controls.Add(this.errorRespuesta);
+            this.Controls.Add(this.botonVolver);
             this.Controls.Add(this.usuarioInput);
-            this.Controls.Add(this.errorMessage);
+            this.Controls.Add(this.errorUsuario);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.respuestaInput);
             this.Controls.Add(this.label2);
@@ -150,7 +185,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label errorMessage;
+        private System.Windows.Forms.Label errorUsuario;
         private System.Windows.Forms.TextBox usuarioInput;
+        private System.Windows.Forms.Button botonVolver;
+        private System.Windows.Forms.Label errorRespuesta;
+        private System.Windows.Forms.Label errorCampos;
     }
 }

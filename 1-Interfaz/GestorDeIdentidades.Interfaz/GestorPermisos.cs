@@ -68,5 +68,11 @@ namespace GestorDeIdentidades.Interfaz
             myFrom.Show();
         }
 
+        private void botonVolver_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var myForm = new Gestor();
+            myForm.Show();
+        }
     }
 }

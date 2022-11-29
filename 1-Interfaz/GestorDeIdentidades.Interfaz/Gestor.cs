@@ -30,5 +30,12 @@ namespace GestorDeIdentidades.Interfaz
             var gestorPermisos = new GestorPermisos();
             gestorPermisos.Show();
         }
+
+        private void botonSalir_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var login = new Login();
+            login.Show();
+        }
     }
 }

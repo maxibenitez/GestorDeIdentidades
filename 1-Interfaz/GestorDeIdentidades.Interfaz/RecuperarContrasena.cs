@@ -22,6 +22,10 @@ namespace GestorDeIdentidades.Interfaz
         {
             InitializeComponent();
 
+            errorCampos.Text = "";
+            errorRespuesta.Text = "";
+            errorUsuario.Text = "";
+
             List<Preguntas> preguntas = _loginLogic.GetPreguntas();
 
             foreach (Preguntas pregunta in preguntas)
@@ -36,9 +40,13 @@ namespace GestorDeIdentidades.Interfaz
             string respuesta = respuestaInput.Text;
             string[] pregunta = InputPregunta.Text.Split(new char[] { '.' });
 
+            errorCampos.Text = "";
+            errorRespuesta.Text = "";
+            errorUsuario.Text = "";
+
             if ( usuario == "" || pregunta.Length == 0 || respuesta == "")
             {
-                errorMessage.Text = "Debe completar todos los campos!";
+                errorCampos.Text = "Debe completar todos los campos!";
             }
             else
             {
@@ -55,15 +63,22 @@ namespace GestorDeIdentidades.Interfaz
                     }
                     else
                     {
-                        errorMessage.Text = "La respuesta es incorrecta!";
+                        errorRespuesta.Text = "Respuesta incorrecta!";
                     }
                 }
                 else
                 {
-                    errorMessage.Text = "Usuario incorrecto!";
+                    errorUsuario.Text = "Usuario incorrecto!";
                 }
                 
             }
+        }
+
+        private void botonVolver_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var login = new Login();
+            login.Show();
         }
     }
 }

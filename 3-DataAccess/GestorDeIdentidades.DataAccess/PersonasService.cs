@@ -12,6 +12,7 @@ using System.Security.Cryptography;
 using System.Collections;
 using System.Security;
 
+
 namespace GestorDeIdentidades.DataAccess
 {
     public class PersonasService
@@ -55,6 +56,7 @@ namespace GestorDeIdentidades.DataAccess
 
                 const string query = @"INSERT INTO Personas (nombres, apellidos, direccion, ciudad, departamento, hashpwd)
                                         VALUES (@Nombres, @Apellidos, @Direccion, @Ciudad, @Departamento, @Hashpwd)";
+
 
                 var parameters = new DynamicParameters();
                 parameters.Add("@Nombres", persona.Nombres, DbType.String);

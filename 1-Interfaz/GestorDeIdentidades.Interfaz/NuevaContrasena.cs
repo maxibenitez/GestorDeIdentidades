@@ -1,4 +1,5 @@
 ﻿using GestorDeIdentidades.Logic;
+using GestorDeIdentidades.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +21,9 @@ namespace GestorDeIdentidades.Interfaz
         {
             InitializeComponent();
             id = user_id;
+
+            errorCampos.Text = "";
+            errorContra.Text = "";
         }
 
         private void buttonCambiar_Click(object sender, EventArgs e)
@@ -29,27 +33,37 @@ namespace GestorDeIdentidades.Interfaz
 
         private void ActualizarContraseña()
         {
+            errorCampos.Text = "";
+            errorContra.Text = "";
+
             string nuevaContra = contraInput.Text;
 
             bool contraValida = _loginLogic.CheckContraseña(id, nuevaContra);
 
-            if (contraValida)
+            if (nuevaContra == "")
             {
-                errorMessage.Text = "La contraseña no puede ser igual a la anterior!";
+                errorCampos.Text = "Debe ingresar una contraseña!";
             }
             else
             {
-                bool resp = _loginLogic.CambiarContraseña(id, nuevaContra);
-
-                if (resp)
+                if (contraValida)
                 {
-                    this.Hide();
-                    var login = new Login();
-                    login.Show();
+                    errorContra.Text = "La contraseña no puede ser igual a la anterior!";
                 }
                 else
                 {
-                    errorMessage.Text = "Ha ocurrido un error!";
+                    bool resp = _loginLogic.CambiarContraseña(id, nuevaContra);
+
+                    if (resp)
+                    {
+                        this.Hide();
+                        var login = new Login();
+                        login.Show();
+                    }
+                    else
+                    {
+                        errorContra.Text = "Ha ocurrido un error!";
+                    }
                 }
             }
         }

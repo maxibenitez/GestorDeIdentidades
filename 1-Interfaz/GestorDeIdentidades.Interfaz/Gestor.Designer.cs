@@ -31,6 +31,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.bAplicativos = new System.Windows.Forms.Button();
             this.bPermisos = new System.Windows.Forms.Button();
+            this.botonSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label5
@@ -63,11 +64,27 @@
             this.bPermisos.UseVisualStyleBackColor = true;
             this.bPermisos.Click += new System.EventHandler(this.bPermisos_Click);
             // 
+            // botonSalir
+            // 
+            this.botonSalir.BackColor = System.Drawing.Color.Transparent;
+            this.botonSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.botonSalir.FlatAppearance.BorderSize = 0;
+            this.botonSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonSalir.ForeColor = System.Drawing.Color.Black;
+            this.botonSalir.Location = new System.Drawing.Point(415, 1);
+            this.botonSalir.Name = "botonSalir";
+            this.botonSalir.Size = new System.Drawing.Size(47, 23);
+            this.botonSalir.TabIndex = 16;
+            this.botonSalir.Text = "SALIR";
+            this.botonSalir.UseVisualStyleBackColor = false;
+            this.botonSalir.Click += new System.EventHandler(this.botonSalir_Click);
+            // 
             // Gestor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(463, 153);
+            this.ClientSize = new System.Drawing.Size(463, 142);
+            this.Controls.Add(this.botonSalir);
             this.Controls.Add(this.bPermisos);
             this.Controls.Add(this.bAplicativos);
             this.Controls.Add(this.label5);
@@ -82,5 +99,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button bAplicativos;
         private System.Windows.Forms.Button bPermisos;
+        private System.Windows.Forms.Button botonSalir;
     }
 }

@@ -18,12 +18,16 @@ namespace GestorDeIdentidades.Interfaz
     {
         private readonly GestorLogic _gestorLogic = new GestorLogic();
         public int user_id;
+        public int app_id;
 
         public EditarPermiso(Permiso permiso)
         {
             InitializeComponent();
+
+            errorMessage.Text = "";
             user_id = permiso.User_id;
             nombre.Text = permiso.NombrePersona;
+            this.app_id = permiso.App_id;
             aplicativo.Text = permiso.NombreApp;
             rolNegocio.Text = permiso.Descripcion_rol_neg;
             fecha.Text = permiso.Fecha_solicitud.ToShortDateString();
@@ -40,26 +44,20 @@ namespace GestorDeIdentidades.Interfaz
 
         private void ActualizarPermiso()
         {
-            
             string estado = estados.Text;
 
-            bool result = _gestorLogic.EditarPermiso(this.user_id, estado);
+            bool result = _gestorLogic.EditarPermiso(this.user_id, this.app_id, estado);
 
             if (result)
             {
-                var myForm = new GestorPermisos();
-                myForm.Show();
+                var gestor = new GestorPermisos();
+                gestor.Show();
                 this.Hide();
             }
             else
             {
                 errorMessage.Text = "Ha ocurrido un problema!";
             }
-        }
-
-        private void estados_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

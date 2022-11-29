@@ -49,9 +49,9 @@ namespace GestorDeIdentidades.Logic
             return rolesNegocioAplicativo;
         }
 
-        public bool EditarPermiso(int userId, string estado)
+        public bool EditarPermiso(int userId,int app_id, string estado)
         {
-            bool result = _permisosService.EditarPermiso(userId, estado);
+            bool result = _permisosService.EditarPermiso(userId, app_id, estado);
 
             return result;
         }
@@ -63,7 +63,7 @@ namespace GestorDeIdentidades.Logic
             foreach (int rol in rolesId)
             {
                 _aplicativosService.AgregarRolesNegocioAplicativos(rol_neg_id, app_id, rol);
-            }
+            }      
         }
     }
 }
