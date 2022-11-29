@@ -60,7 +60,7 @@ namespace GestorDeIdentidades.Interfaz
 
             _gestorLogic.EditarAplicativos(rol_neg_id, app_id, rolesAplicativosId);
 
-            var gestor = new GestorPermisos();
+            var gestor = new Gestor();
             gestor.Show();
             this.Hide();
         }
@@ -68,8 +68,8 @@ namespace GestorDeIdentidades.Interfaz
         private void botonVolver_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var myForm = new Gestor();
-            myForm.Show();
+            var gestor = new Gestor();
+            gestor.Show();
         }
     }
 }
