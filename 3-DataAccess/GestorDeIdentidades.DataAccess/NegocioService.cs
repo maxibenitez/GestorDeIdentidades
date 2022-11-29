@@ -26,5 +26,17 @@ namespace GestorDeIdentidades.DataAccess
                 return connection.Query<RolNegocio>(query, CommandType.Text).ToList();
             }
         }
+
+        public List<RolNegocioAplicativo> GetRolesNegocioAplicativos()
+        {
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                connection.Open();
+
+                const string query = @"SELECT * FROM Roles_Negocio_Aplicativos";
+
+                return connection.Query<RolNegocioAplicativo>(query, CommandType.Text).ToList();
+            }
+        }
     }
 }

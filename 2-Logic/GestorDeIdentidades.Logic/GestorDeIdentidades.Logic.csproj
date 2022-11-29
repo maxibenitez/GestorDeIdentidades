@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DummyLogic.cs" />
     <Compile Include="GestorLogic.cs" />
     <Compile Include="LoginLogic.cs" />
     <Compile Include="PermisosLogic.cs" />

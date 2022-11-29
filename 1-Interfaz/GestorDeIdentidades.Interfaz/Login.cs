@@ -48,8 +48,8 @@ namespace GestorDeIdentidades.Interfaz
                     else
                     {
                         this.Hide();
-                        //var dummy = new Dummy();
-                        //dummy.Show();        
+                        var dummy = new Dummy(user_id);
+                        dummy.Show();        
                     }
                 }
                 else

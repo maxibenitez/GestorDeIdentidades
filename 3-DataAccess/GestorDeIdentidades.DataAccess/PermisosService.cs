@@ -82,6 +82,22 @@ namespace GestorDeIdentidades.DataAccess
             }
         }
 
+        public List<Permiso> GetPersonaPermisosActivos(int userId)
+        {
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                connection.Open();
+
+                const string query = @"SELECT rol_neg_id, estado FROM vwAppDummy 
+                                        WHERE user_id = @UserId, estado = 'Activo' ";
+
+                var parameters = new DynamicParameters();
+                parameters.Add("@UserId", userId, DbType.Int32);
+
+                return connection.Query<Permiso>(query, CommandType.Text).ToList();
+            }
+        }
+
         public bool AddPersonaPermiso(Permiso permiso)
         {
             using (SqlConnection connection = new SqlConnection(ConnectionString))
