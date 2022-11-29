@@ -31,6 +31,20 @@ namespace GestorDeIdentidades.Interfaz
         {
             string nuevaContra = contraInput.Text;
 
+            bool resp = _loginLogic.CambiarContraseña(id, nuevaContra);
+
+            if (resp)
+            {
+                this.Hide();
+                var login = new Login();
+                login.Show();
+            }
+            else
+            {
+                errorMessage.Text = "Ha ocurrido un error!";
+            }
+
+            /*
             bool contraValida = _loginLogic.CheckContraseña(id, nuevaContra);
 
             if (contraValida)
@@ -52,6 +66,7 @@ namespace GestorDeIdentidades.Interfaz
                     errorMessage.Text = "Ha ocurrido un error!";
                 }
             }
+            */
         }
     }
 }

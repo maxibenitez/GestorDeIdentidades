@@ -57,3 +57,6 @@ C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatori
 C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.exe
 C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.pdb
 C:\Users\Maximiliano Benítez\Desktop\UCU\Base de datos I\Obligatorio\Obligatorio\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.Dummy.resources
+C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.Dummy.resources
+C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.UserMenu.resources
+C:\Users\guill\Desktop\GestorDeIdentidades\1-Interfaz\GestorDeIdentidades.Interfaz\obj\Debug\GestorDeIdentidades.Interfaz.SolicitarPermisos.resources

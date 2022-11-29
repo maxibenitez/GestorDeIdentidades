@@ -15,18 +15,26 @@ namespace GestorDeIdentidades.Interfaz
     public partial class Dummy : Form
     {
         private readonly DummyLogic _dummyLogic = new DummyLogic();
-        private int id;
+        private int user_id;
 
         public Dummy(int user_id)
         {
             InitializeComponent();
-            id = user_id;
+            this.user_id = user_id;
 
-            List<Aplicativo> aplicativos = _dummyLogic.GetAplicativosDummy(user_id);
+            List<Aplicativo> aplicativosOriginal = _dummyLogic.GetAplicativosDummy(user_id);
+            List<string> appStrings = new List<String>();
 
-            foreach (Aplicativo aplicativo in aplicativos)
+            foreach (Aplicativo aplicativo in aplicativosOriginal)
             {
-                InputAplicativos.Items.Add($"{aplicativo.App_id}. {aplicativo.NombreApp}");
+                appStrings.Add($"{aplicativo.App_id}. {aplicativo.NombreApp}");
+            }
+
+            List<string> appsstrings = appStrings.Distinct().ToList();
+
+            foreach (string app in appsstrings)
+            {
+                InputAplicativos.Items.Add(app);
             }
         }
 
@@ -35,12 +43,21 @@ namespace GestorDeIdentidades.Interfaz
             string[] aplicativo = InputAplicativos.Text.Split('.');
             int app_id = Convert.ToInt32(aplicativo[0]);
 
-            List<Menus> menus = _dummyLogic.GetMenuDummy(id, app_id);
+            listaMenu.Items.Clear();
+
+            List<Menus> menus = _dummyLogic.GetMenuDummy(this.user_id, app_id);
 
             foreach (Menus menu in menus)
             {
                 listaMenu.Items.Add($"{menu.Menu_id}. {menu.Descripcion_menu}");
             }
+        }
+
+        private void botonVolver_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var myForm = new UserMenu(this.user_id);
+            myForm.Show();
         }
     }
 }

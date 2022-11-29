@@ -34,7 +34,11 @@ namespace GestorDeIdentidades.Logic
             bool isValidPassword = BCrypt.Net.BCrypt.Verify(password, userPassword);
 
             // Se chequea si el usuario tiene rol de administrador y su estado es activo
-            if (userPermiso.Rol_neg_id == 12 && userPermiso.Estado.Equals("Activo"))
+            if(userPermiso == null)
+            {
+                isAdmin = false;
+            }
+            else if (userPermiso.Rol_neg_id == 7 && userPermiso.Estado.Equals("Activo"))
             {
                 isAdmin = true;
             }

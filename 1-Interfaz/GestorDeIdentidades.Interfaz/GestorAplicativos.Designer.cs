@@ -36,6 +36,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.actualizarAplicativos = new System.Windows.Forms.Button();
+            this.botonVolver = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label7
@@ -63,7 +64,6 @@
             this.InputRolesNegocio.Name = "InputRolesNegocio";
             this.InputRolesNegocio.Size = new System.Drawing.Size(221, 21);
             this.InputRolesNegocio.TabIndex = 46;
-            //this.InputRolesNegocio.SelectedIndexChanged += new System.EventHandler(this.InputRolesNegocio_SelectedIndexChanged);
             // 
             // InputAplicativos
             // 
@@ -72,7 +72,6 @@
             this.InputAplicativos.Name = "InputAplicativos";
             this.InputAplicativos.Size = new System.Drawing.Size(221, 21);
             this.InputAplicativos.TabIndex = 48;
-            //this.InputAplicativos.SelectedIndexChanged += new System.EventHandler(this.InputAplicativos_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -111,11 +110,22 @@
             this.actualizarAplicativos.UseVisualStyleBackColor = true;
             this.actualizarAplicativos.Click += new System.EventHandler(this.actualizarAplicativos_Click);
             // 
+            // botonVolver
+            // 
+            this.botonVolver.Location = new System.Drawing.Point(117, 281);
+            this.botonVolver.Name = "botonVolver";
+            this.botonVolver.Size = new System.Drawing.Size(221, 23);
+            this.botonVolver.TabIndex = 52;
+            this.botonVolver.Text = "Volver";
+            this.botonVolver.UseVisualStyleBackColor = true;
+            this.botonVolver.Click += new System.EventHandler(this.botonVolver_Click);
+            // 
             // GestorAplicativos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 294);
+            this.ClientSize = new System.Drawing.Size(430, 313);
+            this.Controls.Add(this.botonVolver);
             this.Controls.Add(this.actualizarAplicativos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label9);
@@ -141,5 +151,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button actualizarAplicativos;
+        private System.Windows.Forms.Button botonVolver;
     }
 }

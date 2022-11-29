@@ -24,9 +24,5 @@ namespace GestorDeIdentidades.Models
 
         public string Respuesta { get; set; }
 
-        public int App_id { get; set; }
-
-        public int Rol_neg_id { get; set; }
-
     }
 }

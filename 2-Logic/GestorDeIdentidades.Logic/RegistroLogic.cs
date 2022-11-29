@@ -59,28 +59,7 @@ namespace GestorDeIdentidades.Logic
                 };
 
                 bool respuesta = _preguntasService.AddPersonaPregunta(nuevaPersonaPregunta);
-
-                // Ingresa solicitud de permisos de nueva persona
-                var nuevoPermiso = new Permiso()
-                {
-                    User_id = newUserId,
-                    App_id = persona.App_id,
-                    Rol_neg_id = persona.Rol_neg_id,
-                    Fecha_solicitud = DateTime.Now,
-                    Fecha_autorizacion = null,
-                    Estado = "Pendiente"
-                };
-
-                bool respuesta1 = _permisosService.AddPersonaPermiso(nuevoPermiso);
-
-                if (respuesta && respuesta1)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                return respuesta;
             }
             else
             {

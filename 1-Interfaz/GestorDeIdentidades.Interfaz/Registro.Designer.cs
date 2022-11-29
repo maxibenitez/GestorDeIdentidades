@@ -47,10 +47,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.InputAplicativo = new System.Windows.Forms.ComboBox();
-            this.InputRol = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // InputContrasena
@@ -73,7 +69,6 @@
             this.InputApellido.Name = "InputApellido";
             this.InputApellido.Size = new System.Drawing.Size(223, 20);
             this.InputApellido.TabIndex = 1;
-            //this.InputApellido.TextChanged += new System.EventHandler(this.InputApellido_TextChanged);
             // 
             // InputDireccion
             // 
@@ -99,7 +94,6 @@
             this.label4.Size = new System.Drawing.Size(55, 13);
             this.label4.TabIndex = 2;
             this.label4.Text = "Apellidos: ";
-            //this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -153,7 +147,7 @@
             // 
             // BotonRegistrarse
             // 
-            this.BotonRegistrarse.Location = new System.Drawing.Point(120, 432);
+            this.BotonRegistrarse.Location = new System.Drawing.Point(120, 365);
             this.BotonRegistrarse.Name = "BotonRegistrarse";
             this.BotonRegistrarse.Size = new System.Drawing.Size(223, 23);
             this.BotonRegistrarse.TabIndex = 3;
@@ -193,7 +187,6 @@
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "Respuesta:";
-            //this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label11
             // 
@@ -204,7 +197,6 @@
             this.label11.Size = new System.Drawing.Size(211, 22);
             this.label11.TabIndex = 8;
             this.label11.Text = "Registrarse en el sistema";
-            //this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label1
             // 
@@ -216,49 +208,11 @@
             this.label1.Text = "Pregunta\r\nde seguridad:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(58, 356);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 13);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "Aplicativo:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(32, 390);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(82, 13);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "Rol de negocio:";
-            // 
-            // InputAplicativo
-            // 
-            this.InputAplicativo.FormattingEnabled = true;
-            this.InputAplicativo.Location = new System.Drawing.Point(120, 353);
-            this.InputAplicativo.Name = "InputAplicativo";
-            this.InputAplicativo.Size = new System.Drawing.Size(223, 21);
-            this.InputAplicativo.TabIndex = 14;
-            // 
-            // InputRol
-            // 
-            this.InputRol.FormattingEnabled = true;
-            this.InputRol.Location = new System.Drawing.Point(120, 387);
-            this.InputRol.Name = "InputRol";
-            this.InputRol.Size = new System.Drawing.Size(223, 21);
-            this.InputRol.TabIndex = 15;
-            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(465, 502);
-            this.Controls.Add(this.InputRol);
-            this.Controls.Add(this.InputAplicativo);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
+            this.ClientSize = new System.Drawing.Size(465, 413);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label2);
@@ -280,7 +234,6 @@
             this.Controls.Add(this.InputContrasena);
             this.Name = "Registro";
             this.Text = "Registro";
-            //this.Load += new System.EventHandler(this.Registro_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,9 +259,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox InputAplicativo;
-        private System.Windows.Forms.ComboBox InputRol;
     }
 }

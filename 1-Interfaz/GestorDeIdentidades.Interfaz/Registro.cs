@@ -26,20 +26,6 @@ namespace GestorDeIdentidades.Interfaz
             {
                 InputPregunta.Items.Add($"{pregunta.Preg_id}. {pregunta.Pregunta}");
             }
-
-            List<Aplicativo> aplicativos = _registroLogic.GetAplicativos();
-
-            foreach (Aplicativo aplicativo in aplicativos)
-            {
-                InputAplicativo.Items.Add($"{aplicativo.App_id}. {aplicativo.NombreApp}");
-            }
-
-            List<RolNegocio> roles = _registroLogic.GetRolesNegocio();
-
-            foreach (RolNegocio rol in roles)
-            {
-                InputRol.Items.Add($"{rol.Rol_neg_id}. {rol.Descripcion_rol_neg}");
-            }
         }
 
         private void BotonRegistrarse_Click(object sender, EventArgs e)
@@ -58,10 +44,6 @@ namespace GestorDeIdentidades.Interfaz
             int pregId = Int32.Parse(pregunta[0]);
             string respuesta = InputRespuesta.Text;
             string contrasena = InputContrasena.Text;
-            string[] aplicativo = InputAplicativo.Text.Split(new char[] { '.' });
-            int appId = Int32.Parse(aplicativo[0]);
-            string[] rol = InputRol.Text.Split(new char[] { '.' });
-            int rolId = Int32.Parse(rol[0]);
 
             if ( contrasena == "" || nombre == "" || apellido == "" || direccion == "" || ciudad == "" || departamento == "" || respuesta == "")
             {
@@ -78,9 +60,7 @@ namespace GestorDeIdentidades.Interfaz
                     Departamento = departamento,
                     Password = contrasena,
                     Preg_id = pregId,
-                    Respuesta = respuesta,
-                    App_id = appId,
-                    Rol_neg_id = rolId
+                    Respuesta = respuesta
                 };
 
                 bool resp = _registroLogic.RegistrarPersona(persona);

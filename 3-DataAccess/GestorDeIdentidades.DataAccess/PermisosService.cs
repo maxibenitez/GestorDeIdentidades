@@ -39,7 +39,7 @@ namespace GestorDeIdentidades.DataAccess
                 var parameters = new DynamicParameters();
                 parameters.Add("@UserId", userId, DbType.Int32);
 
-                return connection.Query<Permiso>(query, parameters, commandType: CommandType.Text).FirstOrDefault();
+                return connection.Query<Permiso>(query, parameters, commandType: CommandType.Text).First();
             }
         }
 
@@ -89,7 +89,7 @@ namespace GestorDeIdentidades.DataAccess
                 connection.Open();
 
                 const string query = @"SELECT rol_neg_id, estado FROM vwAppDummy 
-                                        WHERE user_id = @UserId, estado = 'Activo' ";
+                                        WHERE user_id = @UserId AND estado = 'Activo' ";
 
                 var parameters = new DynamicParameters();
                 parameters.Add("@UserId", userId, DbType.Int32);

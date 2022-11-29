@@ -12,6 +12,7 @@ using System.Security.Cryptography;
 using System.Collections;
 using System.Security;
 
+
 namespace GestorDeIdentidades.DataAccess
 {
     public class PersonasService
@@ -56,6 +57,7 @@ namespace GestorDeIdentidades.DataAccess
                 const string query = @"INSERT INTO Personas (nombres, apellidos, direccion, ciudad, departamento, hashpwd)
                                         VALUES (@Nombres, @Apellidos, @Direccion, @Ciudad, @Departamento, @Hashpwd)";
 
+
                 var parameters = new DynamicParameters();
                 parameters.Add("@Nombres", persona.Nombres, DbType.String);
                 parameters.Add("@Apellidos", persona.Apellidos, DbType.String);
@@ -87,6 +89,9 @@ namespace GestorDeIdentidades.DataAccess
                 parameters.Add("@nuevaContHashed", nuevaContHashed, DbType.String);
                 parameters.Add("@user_id", user_id, DbType.Int32);
 
+                connection.Query(query, parameters, commandType: CommandType.Text);
+                return true;
+                /*
                 var resp = connection.Execute(query, parameters, commandType: CommandType.Text);
 
                 if(resp != 0)
@@ -97,6 +102,7 @@ namespace GestorDeIdentidades.DataAccess
                 {
                     return false;
                 }
+                */
             }
         }
 
