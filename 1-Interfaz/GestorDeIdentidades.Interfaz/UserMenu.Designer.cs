@@ -32,6 +32,7 @@
             this.botonAplicativos = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.botonCambiarContra = new System.Windows.Forms.Button();
+            this.botonSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // botonPermisos
@@ -74,11 +75,27 @@
             this.botonCambiarContra.UseVisualStyleBackColor = true;
             this.botonCambiarContra.Click += new System.EventHandler(this.botonCambiarContra_Click);
             // 
+            // botonSalir
+            // 
+            this.botonSalir.BackColor = System.Drawing.Color.Transparent;
+            this.botonSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.botonSalir.FlatAppearance.BorderSize = 0;
+            this.botonSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonSalir.ForeColor = System.Drawing.Color.Black;
+            this.botonSalir.Location = new System.Drawing.Point(440, 2);
+            this.botonSalir.Name = "botonSalir";
+            this.botonSalir.Size = new System.Drawing.Size(47, 23);
+            this.botonSalir.TabIndex = 15;
+            this.botonSalir.Text = "SALIR";
+            this.botonSalir.UseVisualStyleBackColor = false;
+            this.botonSalir.Click += new System.EventHandler(this.botonSalir_Click);
+            // 
             // UserMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(490, 210);
+            this.Controls.Add(this.botonSalir);
             this.Controls.Add(this.botonCambiarContra);
             this.Controls.Add(this.botonPermisos);
             this.Controls.Add(this.botonAplicativos);
@@ -96,5 +113,6 @@
         private System.Windows.Forms.Button botonAplicativos;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button botonCambiarContra;
+        private System.Windows.Forms.Button botonSalir;
     }
 }

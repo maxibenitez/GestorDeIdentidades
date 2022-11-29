@@ -18,12 +18,14 @@ namespace GestorDeIdentidades.Interfaz
     {
         private readonly GestorLogic _gestorLogic = new GestorLogic();
         public int user_id;
+        public int app_id;
 
         public EditarPermiso(Permiso permiso)
         {
             InitializeComponent();
             user_id = permiso.User_id;
             nombre.Text = permiso.NombrePersona;
+            this.app_id = permiso.App_id;
             aplicativo.Text = permiso.NombreApp;
             rolNegocio.Text = permiso.Descripcion_rol_neg;
             fecha.Text = permiso.Fecha_solicitud.ToShortDateString();
@@ -43,7 +45,7 @@ namespace GestorDeIdentidades.Interfaz
             
             string estado = estados.Text;
 
-            bool result = _gestorLogic.EditarPermiso(this.user_id, estado);
+            bool result = _gestorLogic.EditarPermiso(this.user_id, this.app_id, estado);
 
             if (result)
             {

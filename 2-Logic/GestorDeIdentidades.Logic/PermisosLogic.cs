@@ -48,9 +48,9 @@ namespace GestorDeIdentidades.Logic
             return respuesta;
         }
 
-        public bool EditarPermiso(int userId, string estado)
+        public bool EditarPermiso(int userId, int app_id, string estado)
         {
-            return _permisosService.EditarPermiso(userId, estado);
+            return _permisosService.EditarPermiso(userId, app_id, estado);
         }
     }
 }

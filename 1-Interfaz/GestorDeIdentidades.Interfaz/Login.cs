@@ -18,6 +18,7 @@ namespace GestorDeIdentidades.Interfaz
         public Login()
         {
             InitializeComponent();
+            InputContrasena.PasswordChar = ' ';
         }
 
         private void BotonLogin_Click(object sender, EventArgs e)

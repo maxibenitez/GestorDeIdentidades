@@ -128,7 +128,7 @@ namespace GestorDeIdentidades.DataAccess
             }
         }
 
-        public bool EditarPermiso(int userId, string estado)
+        public bool EditarPermiso(int userId,int app_id, string estado)
         {
             using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
@@ -136,12 +136,13 @@ namespace GestorDeIdentidades.DataAccess
 
                 const string query = @"UPDATE Permisos
                                         SET fecha_autorizacion = @FechaAutorizacion, estado = @Estado
-                                        WHERE user_id = @UserId";
+                                        WHERE user_id = @UserId AND app_id = @app_id";
 
                 var parameters = new DynamicParameters();
                 parameters.Add("@UserId", userId, DbType.Int32);
                 parameters.Add("@FechaAutorizacion", DateTime.Now, DbType.Date);
                 parameters.Add("@Estado", estado, DbType.String);
+                parameters.Add("@app_id", app_id, DbType.Int32);
 
                 var result = connection.Execute(query, parameters, commandType: CommandType.Text);
 

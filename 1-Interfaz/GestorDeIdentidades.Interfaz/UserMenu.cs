@@ -39,5 +39,12 @@ namespace GestorDeIdentidades.Interfaz
             var myForm = new NuevaContrasena(this.user_id);
             myForm.Show();
         }
+
+        private void botonSalir_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var login = new Login();
+            login.Show();
+        }
     }
 }
